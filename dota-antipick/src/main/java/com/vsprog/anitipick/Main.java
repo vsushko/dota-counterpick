@@ -44,13 +44,7 @@ public class Main extends Application {
 }
 
 /*
-WebDriver driver = new HtmlUnitDriver();
-driver.get("http://dota2.ru/heroes/statistic/");
-driver.close();
- */
-
-/*
-HeroesBuilder heroesBuilder = new HeroesBuilder();
+        HeroesBuilder heroesBuilder = new HeroesBuilder();
         List<Image> images = heroesBuilder.loadImageHeroes(heroesBuilder.loadHeroesNames());
 
         StackPane stackPane = new StackPane();
@@ -62,9 +56,7 @@ HeroesBuilder heroesBuilder = new HeroesBuilder();
 
         stackPane.getChildren().addAll(imageView);
 
-
         Scene scene = new Scene(stackPane);
-
 
         stage.setScene(scene);
         stage.setResizable(false);

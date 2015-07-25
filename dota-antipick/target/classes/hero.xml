@@ -1084,20 +1084,8 @@
     <hero id="30">
         <name>Enchantress</name>
         <enemies>
-            <enemy id="15" type="bad">Chen</enemy>
-            <enemy id="3" type="bad">Anti-Mage</enemy>
-            <enemy id="23" type="bad">Doom</enemy>
-            <enemy id="72" type="bad">Riki</enemy>
-            <enemy id="14" type="bad">Chaos Knight</enemy>
-            <enemy id="64" type="bad">Phantom Assassin</enemy>
-            <enemy id="8" type="bad">Bloodseeker</enemy>
-            <enemy id="78" type="bad">Silencer</enemy>
-            <enemy id="58" type="bad">Night Stalker</enemy>
         </enemies>
         <friends>
-            <friend id="68">Pudge</friend>
-            <friend id="18">Crystal Maiden</friend>
-            <friend id="44">Lifestealer</friend>
         </friends>
     </hero>
     <hero id="31">
