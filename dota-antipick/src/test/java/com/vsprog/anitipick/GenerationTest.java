@@ -22,9 +22,9 @@ public class GenerationTest {
 
     @Before
     public void initArray() {
-        badInput = "".split(",");
+        badInput = "Doo,Sil,Blo,Slardar,BH,Tin,Rik,DR,Puc,DP,Lio,Ban".split(",");
         goodInput = "".split(",");
-        friend = "".split(",");
+        friend = "Omn,Daz,Slardar,DS,Clo,Che,Enc,DR,SS".split(",");
 
         heroes = new ArrayList<String>();
         heroes.addAll(Arrays.asList(
