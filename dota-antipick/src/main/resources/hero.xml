@@ -1849,64 +1849,300 @@
     <hero id="51">
         <name>Medusa</name>
         <enemies>
+            <enemy id="92" type="bad">Tinker</enemy>
+            <enemy id="3" type="bad">Anti-Mage</enemy>
+            <enemy id="59" type="bad">Nyx Assassin</enemy>
+            <enemy id="83" type="bad">Spectre</enemy>
+            <enemy id="65" type="bad">Phantom Lancer</enemy>
+            <enemy id="55" type="bad">Naga Siren</enemy>
+            <enemy id="80" type="bad">Slardar</enemy>
+            <enemy id="84" type="bad">Spirit Breaker</enemy>
+            <enemy id="32" type="bad">Faceless Void</enemy>
+            <enemy id="96" type="bad">Troll Warlord</enemy>
+            <enemy id="78" type="bad">Silencer</enemy>
+            <enemy id="72" type="bad">Riki</enemy>
+            <enemy id="5" type="bad">Bane</enemy>
         </enemies>
         <friends>
+            <friend id="18">Crystal Maiden</friend>
+            <friend id="77">Shadow Shaman</friend>
+            <friend id="39">Keeper of the Light</friend>
+            <friend id="46">Lion</friend>
+            <friend id="27">Earthshaker</friend>
+            <friend id="10">Brewmaster</friend>
+            <friend id="43">Lich</friend>
         </friends>
     </hero>
     <hero id="52">
         <name>Meepo</name>
         <enemies>
+            <enemy id="27" type="bad">Earthshaker</enemy>
+            <enemy id="90" type="bad">Tidehunter</enemy>
+            <enemy id="32" type="bad">Faceless Void</enemy>
+            <enemy id="64" type="bad">Phantom Assassin</enemy>
+            <enemy id="43" type="bad">Lich</enemy>
+            <enemy id="68" type="bad">Pudge</enemy>
+            <enemy id="74" type="bad">Sand King</enemy>
+            <enemy id="4" type="bad">Axe</enemy>
+            <enemy id="40" type="bad">Kunkka</enemy>
+            <enemy id="24" type="bad">Dragon Knight</enemy>
+            <enemy id="86" type="bad">Sven</enemy>
+            <enemy id="76" type="bad">Shadow Fiend</enemy>
+            <enemy id="3" type="bad">Anti-Mage</enemy>
+            <enemy id="59" type="bad">Nyx Assassin</enemy>
+            <enemy id="85" type="bad">Storm Spirit</enemy>
+            <enemy id="19" type="bad">Dark Seer</enemy>
+            <enemy id="67" type="bad">Puck</enemy>
+            <enemy id="35" type="bad">Invoker</enemy>
+            <enemy id="78" type="bad">Silencer</enemy>
+            <enemy id="103" type="bad">Warlock</enemy>
         </enemies>
         <friends>
+            <friend id="53">Mirana</friend>
+            <friend id="20">Dazzle</friend>
+            <friend id="99">Vengeful Spirit</friend>
+            <friend id="97">Undying</friend>
+            <friend id="61">Omniknight</friend>
+            <friend id="15">Chen</friend>
+            <friend id="107">Witch Doctor</friend>
+            <friend id="103">Warlock</friend>
+            <friend id="90">Tidehunter</friend>
+            <friend id="22">Disruptor</friend>
+            <friend id="35">Invoker</friend>
+            <friend id="19">Dark Seer</friend>
+            <friend id="37">Jakiro</friend>
+            <friend id="100">Venomancer</friend>
         </friends>
     </hero>
     <hero id="53">
         <name>Mirana</name>
-        <enemies>
+        <enemies><enemy id="23" type="bad">Doom</enemy>
+            <enemy id="58" type="bad">Night Stalker</enemy>
+            <enemy id="31" type="bad">Enigma</enemy>
+            <enemy id="45" type="bad">Lina</enemy>
+            <enemy id="46" type="bad">Lion</enemy>
         </enemies>
         <friends>
+            <friend id="27">Earthshaker</friend>
+            <friend id="86">Sven</friend>
+            <friend id="90">Tidehunter</friend>
+            <friend id="99">Vengeful Spirit</friend>
+            <friend id="100">Venomancer</friend>
+            <friend id="2">Ancient Apparition</friend>
+            <friend id="18">Crystal Maiden</friend>
         </friends>
     </hero>
     <hero id="54">
         <name>Morphling</name>
         <enemies>
+            <enemy id="35" type="bad">Invoker</enemy>
+            <enemy id="70" type="bad">Queen of Pain</enemy>
+            <enemy id="105" type="bad">Windranger</enemy>
+            <enemy id="5" type="bad">Bane</enemy>
+            <enemy id="92" type="bad">Tinker</enemy>
+            <enemy id="22" type="bad">Disruptor</enemy>
+            <enemy id="78" type="bad">Silencer</enemy>
+            <enemy id="109" type="bad">Zeus</enemy>
+            <enemy id="21" type="bad">Death Prophet</enemy>
+            <enemy id="43" type="bad">Lich</enemy>
+            <enemy id="46" type="bad">Lion</enemy>
+            <enemy id="92" type="bad">Tinker</enemy>
+            <enemy id="65" type="bad">Phantom Lancer</enemy>
+            <enemy id="55" type="bad">Naga Siren</enemy>
+            <enemy id="35" type="bad">Invoker</enemy>
+            <enemy id="23" type="bad">Doom</enemy>
+            <enemy id="3" type="bad">Anti-Mage</enemy>
         </enemies>
         <friends>
+            <friend id="18">Crystal Maiden</friend>
+            <friend id="99">Vengeful Spirit</friend>
+            <friend id="75">Shadow Demon</friend>
+            <friend id="27">Earthshaker</friend>
+            <friend id="69">Pugna</friend>
+            <friend id="34">Huskar</friend>
+            <friend id="8">Bloodseeker</friend>
+            <friend id="23">Doom</friend>
+            <friend id="50">Magnus</friend>
         </friends>
     </hero>
     <hero id="55">
         <name>Naga Siren</name>
         <enemies>
+            <enemy id="70" type="bad">Queen of Pain</enemy>
+            <enemy id="74" type="bad">Sand King</enemy>
+            <enemy id="37" type="bad">Jakiro</enemy>
+            <enemy id="22" type="bad">Disruptor</enemy>
+            <enemy id="27" type="bad">Earthshaker</enemy>
+            <enemy id="35" type="bad">Invoker</enemy>
+            <enemy id="19" type="bad">Dark Seer</enemy>
+            <enemy id="45" type="bad">Lina</enemy>
+            <enemy id="93" type="bad">Tiny</enemy>
+            <enemy id="63" type="bad">Outworld Devourer</enemy>
+            <enemy id="40" type="bad">Kunkka</enemy>
+            <enemy id="64" type="bad">Phantom Assassin</enemy>
+            <enemy id="86" type="bad">Sven</enemy>
+            <enemy id="72" type="bad">Riki</enemy>
+            <enemy id="21" type="bad">Death Prophet</enemy>
+            <enemy id="4" type="bad">Axe</enemy>
         </enemies>
         <friends>
+            <friend id="77">Shadow Shaman</friend>
+            <friend id="94">Treant Protector</friend>
+            <friend id="35">Invoker</friend>
+            <friend id="19">Dark Seer</friend>
+            <friend id="31">Enigma</friend>
+            <friend id="90">Tidehunter</friend>
+            <friend id="63">Outworld Devourer</friend>
+            <friend id="71">Razor</friend>
+            <friend id="72">Riki</friend>
+            <friend id="98">Ursa</friend>
         </friends>
     </hero>
     <hero id="56">
         <name>Nature's Prophet</name>
         <enemies>
+            <enemy id="84" type="bad">Spirit Breaker</enemy>
+            <enemy id="80" type="bad">Slardar</enemy>
+            <enemy id="32" type="bad">Faceless Void</enemy>
+            <enemy id="93" type="bad">Tiny</enemy>
+            <enemy id="86" type="bad">Sven</enemy>
+            <enemy id="24" type="bad">Dragon Knight</enemy>
+            <enemy id="7" type="bad">Beastmaster</enemy>
+            <enemy id="1" type="bad">Alchemist</enemy>
+            <enemy id="82" type="bad">Sniper</enemy>
+            <enemy id="72" type="bad">Riki</enemy>
+            <enemy id="8" type="bad">Bloodseeker</enemy>
+            <enemy id="21" type="bad">Death Prophet</enemy>
+            <enemy id="75" type="bad">Shadow Demon</enemy>
+            <enemy id="73" type="bad">Rubick</enemy>
+            <enemy id="60" type="bad">Ogre Magi</enemy>
+            <enemy id="3" type="bad">Anti-Mage</enemy>
+            <enemy id="23" type="bad">Doom</enemy>
+            <enemy id="78" type="bad">Silencer</enemy>
+            <enemy id="74" type="bad">Sand King</enemy>
+            <enemy id="27" type="bad">Earthshaker</enemy>
         </enemies>
         <friends>
+            <friend id="104">Weaver</friend>
+            <friend id="25">Drow Ranger</friend>
+            <friend id="16">Clinkz</friend>
+            <friend id="35">Invoker</friend>
+            <friend id="21">Death Prophet</friend>
+            <friend id="63">Outworld Devourer</friend>
+            <friend id="54">Morphling</friend>
+            <friend id="53">Mirana</friend>
+            <friend id="48">Luna</friend>
+            <friend id="64">Phantom Assassin</friend>
+            <friend id="76">Shadow Fiend</friend>
+            <friend id="34">Huskar</friend>
+            <friend id="78">Silencer</friend>
+            <friend id="30">Enchantress</friend>
+            <friend id="49">Lycan</friend>
+            <enemy id="80" type="bad">Slardar</enemy>
+            <enemy id="93" type="bad">Tiny</enemy>
         </friends>
     </hero>
     <hero id="57">
         <name>Necrophos</name>
         <enemies>
+            <enemy id="58" type="bad">Night Stalker</enemy>
+            <enemy id="25" type="bad">Drow Ranger</enemy>
+            <enemy id="8" type="bad">Bloodseeker</enemy>
+            <enemy id="21" type="bad">Death Prophet</enemy>
+            <enemy id="78" type="bad">Silencer</enemy>
+            <enemy id="3" type="bad">Anti-Mage</enemy>
+            <enemy id="108" type="bad">Wraith King</enemy>
+            <enemy id="32" type="bad">Faceless Void</enemy>
+            <enemy id="65" type="bad">Phantom Lancer</enemy>
+            <enemy id="72" type="bad">Riki</enemy>
+            <enemy id="23" type="bad">Doom</enemy>
+            <enemy id="34" type="bad">Huskar</enemy>
         </enemies>
         <friends>
+            <friend id="34">Huskar</friend>
+            <friend id="68">Pudge</friend>
+            <friend id="45">Lina</friend>
+            <friend id="109">Zeus</friend>
+            <friend id="70">Queen of Pain</friend>
         </friends>
     </hero>
     <hero id="58">
         <name>Night Stalker</name>
         <enemies>
+            <enemy id="7" type="bad">Beastmaster</enemy>
+            <enemy id="12" type="bad">Broodmother</enemy>
+            <enemy id="100" type="bad">Venomancer</enemy>
+            <enemy id="90" type="bad">Tidehunter</enemy>
+            <enemy id="74" type="bad">Sand King</enemy>
+            <enemy id="63" type="bad">Outworld Devourer</enemy>
+            <enemy id="46" type="bad">Lion</enemy>
+            <enemy id="5" type="bad">Bane</enemy>
+            <enemy id="6" type="bad">Batrider</enemy>
+            <enemy id="8" type="bad">Bloodseeker</enemy>
+            <enemy id="71" type="bad">Razor</enemy>
+            <enemy id="10" type="bad">Brewmaster</enemy>
+            <enemy id="101" type="bad">Viper</enemy>
+            <enemy id="32" type="bad">Faceless Void</enemy>
+            <enemy id="64" type="bad">Phantom Assassin</enemy>
+            <enemy id="44" type="bad">Lifestealer</enemy>
+            <enemy id="25" type="bad">Drow Ranger</enemy>
+            <enemy id="65" type="bad">Phantom Lancer</enemy>
+            <enemy id="55" type="bad">Naga Siren</enemy>
+            <enemy id="75" type="bad">Shadow Demon</enemy>
+            <enemy id="94" type="bad">Treant Protector</enemy>
+            <enemy id="92" type="bad">Tinker</enemy>
         </enemies>
         <friends>
+            <friend id="84">Spirit Breaker</friend>
+            <friend id="36">Io</friend>
+            <friend id="56">Nature's Prophet</friend>
+            <friend id="9">Bounty Hunter</friend>
+            <friend id="13">Centaur Warrunner</friend>
+            <friend id="17">Clockwerk</friend>
+            <friend id="93">Tiny</friend>
+            <friend id="44">Lifestealer</friend>
+            <friend id="99">Vengeful Spirit</friend>
+            <friend id="5">Bane</friend>
+            <friend id="75">Shadow Demon</friend>
+            <friend id="45">Lina</friend>
+            <friend id="37">Jakiro</friend>
+            <friend id="2">Ancient Apparition</friend>
+            <friend id="48">Luna</friend>
+            <friend id="18">Crystal Maiden</friend>
         </friends>
     </hero>
     <hero id="59">
         <name>Nyx Assassin</name>
         <enemies>
+            <enemy id="92" type="bad">Tinker</enemy>
+            <enemy id="3" type="bad">Anti-Mage</enemy>
+            <enemy id="9" type="bad">Bounty Hunter</enemy>
+            <enemy id="80" type="bad">Slardar</enemy>
+            <enemy id="86" type="bad">Sven</enemy>
+            <enemy id="69" type="bad">Pugna</enemy>
+            <enemy id="92" type="bad">Tinker</enemy>
+            <enemy id="23" type="bad">Doom</enemy>
+            <enemy id="8" type="bad">Bloodseeker</enemy>
+            <enemy id="85" type="bad">Storm Spirit</enemy>
+            <enemy id="73" type="bad">Rubick</enemy>
+            <enemy id="5" type="bad">Bane</enemy>
+            <enemy id="16" type="bad">Clinkz</enemy>
         </enemies>
         <friends>
+            <friend id="39">Keeper of the Light</friend>
+            <friend id="18">Crystal Maiden</friend>
+            <friend id="63">Outworld Devourer</friend>
+            <friend id="43">Lich</friend>
+            <friend id="46">Lion</friend>
+            <friend id="45">Lina</friend>
+            <friend id="3">Anti-Mage</friend>
+            <friend id="99">Vengeful Spirit</friend>
+            <friend id="98">Ursa</friend>
+            <friend id="44">Lifestealer</friend>
+            <friend id="103">Warlock</friend>
+            <friend id="20">Dazzle</friend>
+            <friend id="61">Omniknight</friend>
+            <friend id="30">Enchantress</friend>
         </friends>
     </hero>
     <hero id="60">
