@@ -2496,8 +2496,26 @@
     <hero id="71">
         <name>Razor</name>
         <enemies>
+            <enemy id="98" type="bad">Ursa</enemy>
+            <enemy id="93" type="bad">Tiny</enemy>
+            <enemy id="10" type="bad">Brewmaster</enemy>
+            <enemy id="92" type="bad">Tinker</enemy>
+            <enemy id="46" type="bad">Lion</enemy>
+            <enemy id="57" type="bad">Necrophos</enemy>
+            <enemy id="3" type="bad">Anti-Mage</enemy>
+            <enemy id="72" type="bad">Riki</enemy>
         </enemies>
         <friends>
+            <friend id="5">Bane</friend>
+            <friend id="56">Nature's Prophet</friend>
+            <friend id="77">Shadow Shaman</friend>
+            <friend id="31">Enigma</friend>
+            <friend id="74">Sand King</friend>
+            <friend id="27">Earthshaker</friend>
+            <friend id="75">Shadow Demon</friend>
+            <friend id="101">Viper</friend>
+            <friend id="100">Venomancer</friend>
+            <friend id="102">Visage</friend>
         </friends>
     </hero>
     <hero id="72">
