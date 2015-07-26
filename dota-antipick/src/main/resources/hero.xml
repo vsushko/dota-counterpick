@@ -1103,8 +1103,33 @@
     <hero id="31">
         <name>Enigma</name>
         <enemies>
+            <enemy id="58" type="bad">Night Stalker</enemy>
+            <enemy id="25" type="bad">Drow Ranger</enemy>
+            <enemy id="72" type="bad">Riki</enemy>
+            <enemy id="82" type="bad">Sniper</enemy>
+            <enemy id="78" type="bad">Silencer</enemy>
+            <enemy id="8" type="bad">Bloodseeker</enemy>
+            <enemy id="21" type="bad">Death Prophet</enemy>
+            <enemy id="9" type="bad">Bounty Hunter</enemy>
+            <enemy id="16" type="bad">Clinkz</enemy>
+            <enemy id="59" type="bad">Nyx Assassin</enemy>
+            <enemy id="73" type="bad">Rubick</enemy>
+            <enemy id="99" type="bad">Vengeful Spirit</enemy>
+            <enemy id="75" type="bad">Shadow Demon</enemy>
         </enemies>
         <friends>
+            <friend id="76">Shadow Fiend</friend>
+            <friend id="90">Tidehunter</friend>
+            <friend id="43">Lich</friend>
+            <friend id="27">Earthshaker</friend>
+            <friend id="93">Tiny</friend>
+            <friend id="74">Sand King</friend>
+            <friend id="50">Magnus</friend>
+            <friend id="52">Meepo</friend>
+            <friend id="40">Kunkka</friend>
+            <friend id="37">Jakiro</friend>
+            <friend id="91">Timbersaw</friend>
+            <friend id="70">Queen of Pain</friend>
         </friends>
     </hero>
     <hero id="32">
