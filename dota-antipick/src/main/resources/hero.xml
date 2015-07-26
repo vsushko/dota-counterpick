@@ -1529,22 +1529,125 @@
     <hero id="41">
         <name>Legion Commander</name>
         <enemies>
+            <enemy id="108" type="bad">Wraith King</enemy>
+            <enemy id="0" type="bad">Abaddon</enemy>
+            <enemy id="20" type="bad">Dazzle</enemy>
+            <enemy id="61" type="bad">Omniknight</enemy>
+            <enemy id="62" type="bad">Oracle</enemy>
+            <enemy id="96" type="bad">Troll Warlord</enemy>
+            <enemy id="106" type="bad">Winter Wyvern</enemy>
+            <enemy id="6" type="bad">Batrider</enemy>
+            <enemy id="84" type="bad">Spirit Breaker</enemy>
+            <enemy id="50" type="bad">Magnus</enemy>
+            <enemy id="32" type="bad">Faceless Void</enemy>
+            <enemy id="7" type="bad">Beastmaster</enemy>
+            <enemy id="78" type="bad">Silencer</enemy>
+
+            <!-- против кого можно брать -->
+            <enemy id="12" type="good">Broodmother</enemy>
+            <enemy id="31" type="good">Enigma</enemy>
+            <enemy id="65" type="good">Phantom Lancer</enemy>
+            <enemy id="56" type="good">Nature's Prophet</enemy>
+            <enemy id="14" type="good">Chaos Knight</enemy>
+            <enemy id="55" type="good">Naga Siren</enemy>
+            <enemy id="30" type="good">Enchantress</enemy>
+            <enemy id="15" type="good">Chen</enemy>
+            <enemy id="73" type="good">Rubick</enemy>
+            <enemy id="44" type="good">Lifestealer</enemy>
+            <enemy id="64" type="good">Phantom Assassin</enemy>
         </enemies>
         <friends>
+            <friend id="46">Lion</friend>
+            <friend id="92">Tinker</friend>
+            <friend id="61">Omniknight</friend>
+            <friend id="20">Dazzle</friend>
+            <friend id="56">Nature's Prophet</friend>
+            <friend id="35">Invoker</friend>
+            <friend id="96">Troll Warlord</friend>
         </friends>
     </hero>
     <hero id="42">
         <name>Leshrac</name>
         <enemies>
+            <enemy id="67" type="bad">Puck</enemy>
+            <enemy id="78" type="bad">Silencer</enemy>
+            <enemy id="85" type="bad">Storm Spirit</enemy>
+            <enemy id="16" type="bad">Clinkz</enemy>
+            <enemy id="49" type="bad">Lycan</enemy>
+            <enemy id="14" type="bad">Chaos Knight</enemy>
+            <enemy id="80" type="bad">Slardar</enemy>
+            <enemy id="32" type="bad">Faceless Void</enemy>
+            <enemy id="58" type="bad">Night Stalker</enemy>
+            <enemy id="64" type="bad">Phantom Assassin</enemy>
+            <enemy id="83" type="bad">Spectre</enemy>
+            <enemy id="76" type="bad">Shadow Fiend</enemy>
+            <enemy id="98" type="bad">Ursa</enemy>
+            <enemy id="68" type="bad">Pudge</enemy>
+            <enemy id="3" type="bad">Anti-Mage</enemy>
+            <enemy id="65" type="bad">Phantom Lancer</enemy>
+            <enemy id="39" type="bad">Keeper of the Light</enemy>
+            <enemy id="7" type="bad">Beastmaster</enemy>
+            <enemy id="13" type="bad">Centaur Warrunner</enemy>
+            <enemy id="1" type="bad">Alchemist</enemy>
+            <enemy id="86" type="bad">Sven</enemy>
+            <enemy id="93" type="bad">Tiny</enemy>
+            <enemy id="6" type="bad">Batrider</enemy>
+            <enemy id="75" type="bad">Shadow Demon</enemy>
+            <enemy id="35" type="bad">Invoker</enemy>
+            <enemy id="60" type="bad">Ogre Magi</enemy>
+            <enemy id="37" type="bad">Jakiro</enemy>
         </enemies>
         <friends>
+            <friend id="75">Shadow Demon</friend>
+            <friend id="36">Io</friend>
+            <friend id="19">Dark Seer</friend>
+            <friend id="93">Tiny</friend>
+            <friend id="65">Phantom Lancer</friend>
+            <friend id="94">Treant Protector</friend>
+            <friend id="73">Rubick</friend>
+            <friend id="18">Crystal Maiden</friend>
         </friends>
     </hero>
     <hero id="43">
         <name>Lich</name>
         <enemies>
+            <enemy id="72" type="bad">Riki</enemy>
+            <enemy id="78" type="bad">Silencer</enemy>
+            <enemy id="104" type="bad">Weaver</enemy>
+            <enemy id="3" type="bad">Anti-Mage</enemy>
+            <enemy id="8" type="bad">Bloodseeker</enemy>
+            <enemy id="14" type="bad">Chaos Knight</enemy>
+            <enemy id="44" type="bad">Lifestealer</enemy>
+            <enemy id="84" type="bad">Spirit Breaker</enemy>
+            <enemy id="80" type="bad">Slardar</enemy>
+            <enemy id="58" type="bad">Night Stalker</enemy>
+            <enemy id="21" type="bad">Death Prophet</enemy>
+            <enemy id="25" type="bad">Drow Ranger</enemy>
+            <enemy id="59" type="bad">Nyx Assassin</enemy>
+            <enemy id="65" type="bad">Phantom Lancer</enemy>
+            <enemy id="55" type="bad">Naga Siren</enemy>
+            <enemy id="16" type="bad">Clinkz</enemy>
         </enemies>
         <friends>
+            <friend id="32">Faceless Void</friend>
+            <friend id="50">Magnus</friend>
+            <friend id="19">Dark Seer</friend>
+            <friend id="101">Viper</friend>
+            <friend id="18">Crystal Maiden</friend>
+            <friend id="90">Tidehunter</friend>
+            <friend id="31">Enigma</friend>
+            <friend id="93">Tiny</friend>
+            <friend id="27">Earthshaker</friend>
+            <friend id="74">Sand King</friend>
+            <friend id="31">Enigma</friend>
+            <friend id="22">Disruptor</friend>
+            <friend id="19">Dark Seer</friend>
+            <friend id="90">Tidehunter</friend>
+            <friend id="103">Warlock</friend>
+            <friend id="94">Treant Protector</friend>
+            <friend id="84">Spirit Breaker</friend>
+            <friend id="64">Phantom Assassin</friend>
+            <friend id="98">Ursa</friend>
         </friends>
     </hero>
     <hero id="44">
