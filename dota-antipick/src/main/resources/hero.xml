@@ -1447,15 +1447,83 @@
     <hero id="39">
         <name>Keeper of the Light</name>
         <enemies>
+            <enemy id="84" type="bad">Spirit Breaker</enemy>
+            <enemy id="32" type="bad">Faceless Void</enemy>
+            <enemy id="80" type="bad">Slardar</enemy>
+            <enemy id="96" type="bad">Troll Warlord</enemy>
+            <enemy id="65" type="bad">Phantom Lancer</enemy>
+            <enemy id="14" type="bad">Chaos Knight</enemy>
+            <enemy id="64" type="bad">Phantom Assassin</enemy>
+            <enemy id="54" type="bad">Morphling</enemy>
+            <enemy id="32" type="bad">Faceless Void</enemy>
+            <enemy id="3" type="bad">Anti-Mage</enemy>
+            <enemy id="78" type="bad">Silencer</enemy>
+            <enemy id="25" type="bad">Drow Ranger</enemy>
+            <enemy id="21" type="bad">Death Prophet</enemy>
+            <enemy id="58" type="bad">Night Stalker</enemy>
+            <enemy id="8" type="bad">Bloodseeker</enemy>
+            <enemy id="67" type="bad">Puck</enemy>
+            <enemy id="83" type="bad">Spectre</enemy>
+            <enemy id="85" type="bad">Storm Spirit</enemy>
+            <enemy id="5" type="bad">Bane</enemy>
+            <enemy id="59" type="bad">Nyx Assassin</enemy>
+            <enemy id="23" type="bad">Doom</enemy>
         </enemies>
         <friends>
+            <friend id="31">Enigma</friend>
+            <friend id="22">Disruptor</friend>
+            <friend id="17">Clockwerk</friend>
+            <friend id="67">Puck</friend>
+            <friend id="94">Treant Protector</friend>
+            <friend id="103">Warlock</friend>
+            <friend id="21">Death Prophet</friend>
+            <friend id="12">Broodmother</friend>
+            <friend id="97">Undying</friend>
+            <friend id="37">Jakiro</friend>
+            <friend id="19">Dark Seer</friend>
+            <friend id="14">Chaos Knight</friend>
+            <friend id="64">Phantom Assassin</friend>
+            <friend id="54">Morphling</friend>
+            <friend id="65">Phantom Lancer</friend>
+            <friend id="32">Faceless Void</friend>
+            <friend id="3">Anti-Mage</friend>
+            <friend id="18">Crystal Maiden</friend>
+            <friend id="38">Juggernaut</friend>
+            <friend id="24">Dragon Knight</friend>
+            <friend id="21">Death Prophet</friend>
+            <friend id="69">Pugna</friend>
+            <friend id="71">Razor</friend>
+            <friend id="73">Rubick</friend>
+            <friend id="27">Earthshaker</friend>
+            <friend id="93">Tiny</friend>
         </friends>
     </hero>
     <hero id="40">
         <name>Kunkka</name>
         <enemies>
+            <enemy id="64" type="bad">Phantom Assassin</enemy>
+            <enemy id="32" type="bad">Faceless Void</enemy>
+            <enemy id="3" type="bad">Anti-Mage</enemy>
+            <enemy id="44" type="bad">Lifestealer</enemy>
+            <enemy id="73" type="bad">Rubick</enemy>
+            <enemy id="68" type="bad">Pudge</enemy>
+            <enemy id="61" type="bad">Omniknight</enemy>
+            <enemy id="39" type="bad">Keeper of the Light</enemy>
         </enemies>
         <friends>
+            <friend id="46">Lion</friend>
+            <friend id="16">Clinkz</friend>
+            <friend id="34">Huskar</friend>
+            <friend id="5">Bane</friend>
+            <friend id="39">Keeper of the Light</friend>
+            <friend id="77">Shadow Shaman</friend>
+            <friend id="75">Shadow Demon</friend>
+            <friend id="56">Nature's Prophet</friend>
+            <friend id="32">Faceless Void</friend>
+            <friend id="31">Enigma</friend>
+            <friend id="50">Magnus</friend>
+            <friend id="90">Tidehunter</friend>
+            <friend id="94">Treant Protector</friend>
         </friends>
     </hero>
     <hero id="41">
