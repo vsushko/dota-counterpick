@@ -1372,15 +1372,76 @@
     <hero id="37">
         <name>Jakiro</name>
         <enemies>
+            <enemy id="55" type="bad">Naga Siren</enemy>
+            <enemy id="25" type="bad">Drow Ranger</enemy>
+            <enemy id="72" type="bad">Riki</enemy>
+            <enemy id="21" type="bad">Death Prophet</enemy>
+            <enemy id="22" type="bad">Disruptor</enemy>
+            <enemy id="67" type="bad">Puck</enemy>
+            <enemy id="78" type="bad">Silencer</enemy>
+            <enemy id="3" type="bad">Anti-Mage</enemy>
+            <enemy id="59" type="bad">Nyx Assassin</enemy>
+            <enemy id="39" type="bad">Keeper of the Light</enemy>
+            <enemy id="44" type="bad">Lifestealer</enemy>
+            <enemy id="61" type="bad">Omniknight</enemy>
+            <enemy id="17" type="bad">Clockwerk</enemy>
         </enemies>
         <friends>
+            <friend id="31">Enigma</friend>
+            <friend id="90">Tidehunter</friend>
+            <friend id="32">Faceless Void</friend>
+            <friend id="94">Treant Protector</friend>
+            <friend id="27">Earthshaker</friend>
+            <friend id="74">Sand King</friend>
+            <friend id="56">Nature's Prophet</friend>
+            <friend id="31">Enigma</friend>
+            <friend id="100">Venomancer</friend>
+            <friend id="12">Broodmother</friend>
+            <friend id="15">Chen</friend>
+            <friend id="30">Enchantress</friend>
+            <friend id="77">Shadow Shaman</friend>
+            <friend id="92">Tinker</friend>
+            <friend id="21">Death Prophet</friend>
+            <friend id="84">Spirit Breaker</friend>
+            <friend id="86">Sven</friend>
+            <friend id="59">Nyx Assassin</friend>
+            <friend id="50">Magnus</friend>
+            <friend id="80">Slardar</friend>
+            <friend id="60">Ogre Magi</friend>
+            <friend id="46">Lion</friend>
+            <friend id="19">Dark Seer</friend>
+            <friend id="85">Storm Spirit</friend>
+            <friend id="2">Ancient Apparition</friend>
+            <friend id="18">Crystal Maiden</friend>
+            <friend id="77">Shadow Shaman</friend>
+            <friend id="17">Clockwerk</friend>
+            <friend id="22">Disruptor</friend>
         </friends>
     </hero>
     <hero id="38">
         <name>Juggernaut</name>
         <enemies>
+            <enemy id="18" type="bad">Crystal Maiden</enemy>
+            <enemy id="100" type="bad">Venomancer</enemy>
+            <enemy id="27" type="bad">Earthshaker</enemy>
+            <enemy id="77" type="bad">Shadow Shaman</enemy>
+            <enemy id="7" type="bad">Beastmaster</enemy>
+            <enemy id="97" type="bad">Undying</enemy>
+            <enemy id="61" type="bad">Omniknight</enemy>
+            <enemy id="23" type="bad">Doom</enemy>
         </enemies>
         <friends>
+            <friend id="61">Omniknight</friend>
+            <friend id="23">Doom</friend>
+            <friend id="20">Dazzle</friend>
+            <friend id="3">Anti-Mage</friend>
+            <friend id="81">Slark</friend>
+            <friend id="64">Phantom Assassin</friend>
+            <friend id="74">Sand King</friend>
+            <friend id="108">Wraith King</friend>
+            <friend id="86">Sven</friend>
+            <friend id="99">Vengeful Spirit</friend>
+            <friend id="18">Crystal Maiden</friend>
         </friends>
     </hero>
     <hero id="39">
