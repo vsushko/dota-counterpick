@@ -10,6 +10,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -22,10 +23,10 @@ public class HeroesBuilder {
     private static final String IMAGES_PATH = "images/";
 
     public List<Image> getHeroesPictures(String resource) {
-        List<String> names = loadHeroesNames();
-        List<Image> images = loadImageHeroes(names);
+//        List<String> names = loadHeroesNames();
+//        List<Image> images = loadImageHeroes(names);
 
-        return images;
+        return null;
     }
 
     public List<Image> loadImageHeroes(List<String> names) {
@@ -38,8 +39,9 @@ public class HeroesBuilder {
         return images;
     }
 
-    public List<String> loadHeroesNames() {
-        List<String> names = new ArrayList<String>();
+    public List<Hero> loadHeroesNames() {
+        List<Hero> heroes = new ArrayList<Hero>();
+        Hero hero;
 
         try {
             File fXmlFile = new File(getClass().getClassLoader().getResource(HERO_PATH).getFile());
@@ -55,13 +57,17 @@ public class HeroesBuilder {
                 Node nNode = nodes.item(i);
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
-                    names.add(eElement.getElementsByTagName("name").item(0).getTextContent());
+                    hero = new Hero();
+                    hero.setName(eElement.getElementsByTagName("name").item(0).getTextContent());
+                    hero.setEnemies(new ArrayList<String>(Arrays.asList(eElement.getElementsByTagName("enemies").item(0).getTextContent().split(" "))));
+                    heroes.add(hero);
+
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return names;
+        return heroes;
     }
 
 }

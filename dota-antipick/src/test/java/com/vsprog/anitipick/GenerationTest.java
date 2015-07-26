@@ -22,9 +22,9 @@ public class GenerationTest {
 
     @Before
     public void initArray() {
-        badInput = "AH,NiS,DR,Rik,Sni,Sil,Blo,DP,BH,Cli,NA,Rub,VS,SD".split(",");
+        badInput = "Cli,BH,PA,Rik,DR,Dis,Ear,Tin,Blo,Ban,Doo".split(",");
         goodInput = "".split(",");
-        friend = "SF,Tid,Lic,Ear,Tiny,SK,Mag,Mee,Kun,Jak,Lun,NS,Tim,QP".split(",");
+        friend = "Rik,Sve,CK,Urs,Tiny,Mor,AM,Al,Pud,StS,Puc,Ear,Pug,Lif,NP,Spe,Sve,H,LD,Enc,Che,Omn,FV,Slardar".split(",");
 
         heroes = new ArrayList<String>();
         heroes.addAll(Arrays.asList(
@@ -123,10 +123,11 @@ public class GenerationTest {
         heroesMap.put("Mee", "Meepo");
         heroesMap.put("Mir", "Mirana");
         heroesMap.put("Mor", "Morphling");
-        heroesMap.put("NaS", "Naga Siren");
+
+        heroesMap.put("Nas", "Naga Siren");
         heroesMap.put("NP", "Nature's Prophet");
         heroesMap.put("Nec", "Necrophos");
-        heroesMap.put("NiS", "Night Stalker");
+        heroesMap.put("Nis", "Night Stalker");
         heroesMap.put("NA", "Nyx Assassin");
 
         heroesMap.put("OM", "Ogre Magi");

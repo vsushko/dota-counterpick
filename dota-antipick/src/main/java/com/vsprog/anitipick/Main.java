@@ -23,9 +23,9 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         HeroesBuilder heroesBuilder = new HeroesBuilder();
-        List<Image> images = heroesBuilder.loadImageHeroes(heroesBuilder.loadHeroesNames());
+//        List<Image> images = heroesBuilder.loadImageHeroes(heroesBuilder.loadHeroesNames());
 
-        String cssBordering = "-fx-border-color:darkblue ; \n" //#090a0c
+        /*String cssBordering = "-fx-border-color:darkblue ; \n" //#090a0c
                 + "-fx-border-insets:3;\n"
                 + "-fx-border-radius:7;\n"
                 + "-fx-border-width:1.0";
@@ -39,7 +39,7 @@ public class Main extends Application {
         stage.setTitle("DOTA ANTI PICK v.1.0.0");
         stage.setScene(new Scene(root));
         stage.setResizable(false);
-        stage.show();
+        stage.show();*/
     }
 }
 
