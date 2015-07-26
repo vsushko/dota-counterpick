@@ -3277,8 +3277,49 @@
     <hero id="94">
         <name>Treant Protector</name>
         <enemies>
+            <enemy id="23" type="bad">Doom</enemy>
+            <enemy id="83" type="bad">Spectre</enemy>
+            <enemy id="85" type="bad">Storm Spirit</enemy>
+            <enemy id="6" type="bad">Batrider</enemy>
+            <enemy id="63" type="bad">Outworld Devourer</enemy>
+            <enemy id="44" type="bad">Lifestealer</enemy>
+            <enemy id="58" type="bad">Night Stalker</enemy>
+            <enemy id="3" type="bad">Anti-Mage</enemy>
+            <enemy id="73" type="bad">Rubick</enemy>
+            <enemy id="78" type="bad">Silencer</enemy>
+            <enemy id="50" type="bad">Magnus</enemy>
+            <enemy id="9" type="bad">Bounty Hunter</enemy>
+            <enemy id="91" type="bad">Timbersaw</enemy>
         </enemies>
         <friends>
+            <friend id="76">Shadow Fiend</friend>
+            <friend id="79">Skywrath Mage</friend>
+            <friend id="27">Earthshaker</friend>
+            <friend id="74">Sand King</friend>
+            <friend id="50">Magnus</friend>
+            <friend id="90">Tidehunter</friend>
+            <friend id="43">Lich</friend>
+            <friend id="31">Enigma</friend>
+            <friend id="2">Ancient Apparition</friend>
+            <friend id="37">Jakiro</friend>
+            <friend id="33">Gyrocopter</friend>
+            <friend id="18">Crystal Maiden</friend>
+            <friend id="22">Disruptor</friend>
+            <friend id="103">Warlock</friend>
+            <friend id="70">Queen of Pain</friend>
+            <friend id="48">Luna</friend>
+            <friend id="109">Zeus</friend>
+            <friend id="19">Dark Seer</friend>
+            <friend id="98">Ursa</friend>
+            <friend id="64">Phantom Assassin</friend>
+            <friend id="52">Meepo</friend>
+            <friend id="72">Riki</friend>
+            <friend id="84">Spirit Breaker</friend>
+            <friend id="16">Clinkz</friend>
+            <friend id="86">Sven</friend>
+            <friend id="63">Outworld Devourer</friend>
+            <friend id="32">Faceless Void</friend>
+            <friend id="78">Silencer</friend>
         </friends>
     </hero>
     <hero id="95">
@@ -3749,4 +3790,3 @@
         </friends>
     </hero>
 </heroes>
-
