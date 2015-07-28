@@ -1,10 +1,13 @@
 package com.vsprog.anitipick;
 
-import jdk.nashorn.internal.ir.annotations.Ignore;
+
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Ignore;
 
 import java.util.*;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author vsa
@@ -189,8 +192,6 @@ public class GenerationTest {
         heroesMap.put("WK", "Wraith King");
 
         heroesMap.put("Z", "Zeus");
-
-
     }
 
     @Test
@@ -288,4 +289,19 @@ public class GenerationTest {
         }
         return "NOT_FOUND: " + heroName;
     }
+
+    @Test
+    public void loadHeroesInfoTest() {
+        HeroesBuilder heroesBuilder = new HeroesBuilder();
+
+        List<Hero> heroes = heroesBuilder.loadHeroesInfo();
+        assertEquals(heroes.size(), 110);
+
+        List<String> enemies = heroes.get(0).getEnemies();
+        assertEquals(enemies.size(), 19);
+
+        List<String> friends = heroes.get(0).getFriends();
+        assertEquals(friends.size(), 7);
+    }
+
 }

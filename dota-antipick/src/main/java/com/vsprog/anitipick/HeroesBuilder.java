@@ -1,6 +1,7 @@
 package com.vsprog.anitipick;
 
 import javafx.scene.image.Image;
+import org.apache.xerces.dom.DeferredElementImpl;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -23,7 +24,7 @@ public class HeroesBuilder {
     private static final String IMAGES_PATH = "images/";
 
     public List<Image> getHeroesPictures(String resource) {
-//        List<String> names = loadHeroesNames();
+//        List<String> names = loadHeroesInfo();
 //        List<Image> images = loadImageHeroes(names);
 
         return null;
@@ -39,29 +40,37 @@ public class HeroesBuilder {
         return images;
     }
 
-    public List<Hero> loadHeroesNames() {
+    public List<Hero> loadHeroesInfo() {
         List<Hero> heroes = new ArrayList<Hero>();
         Hero hero;
 
         try {
-            File fXmlFile = new File(getClass().getClassLoader().getResource(HERO_PATH).getFile());
-            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            File xmlFile = new File(getClass().getClassLoader().getResource(HERO_PATH).getFile());
+            DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = builderFactory.newDocumentBuilder();
 
-            Document doc = dBuilder.parse(fXmlFile);
-            doc.getDocumentElement().normalize();
+            Document document = dBuilder.parse(xmlFile);
+            document.getDocumentElement().normalize();
 
-            NodeList nodes = doc.getElementsByTagName("hero");
+            NodeList nodes = document.getElementsByTagName("hero");
 
             for (int i = 0; i < nodes.getLength(); i++) {
-                Node nNode = nodes.item(i);
-                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                    Element eElement = (Element) nNode;
+                Node node = nodes.item(i);
+                if (node.getNodeType() == Node.ELEMENT_NODE) {
+                    Element element = (Element) node;
                     hero = new Hero();
-                    hero.setName(eElement.getElementsByTagName("name").item(0).getTextContent());
-                    hero.setEnemies(new ArrayList<String>(Arrays.asList(eElement.getElementsByTagName("enemies").item(0).getTextContent().split(" "))));
-                    heroes.add(hero);
+                    hero.setName(element.getElementsByTagName("name").item(0).getTextContent());
 
+                    NodeList enemies = ((DeferredElementImpl) ((Element) node).getElementsByTagName("enemies").item(0)).getElementsByTagName("enemy");
+                    for (int j = 0; j < enemies.getLength(); j++) {
+                        hero.addEnemy(enemies.item(j).getTextContent());
+                    }
+
+                    NodeList friends = ((DeferredElementImpl) ((Element) node).getElementsByTagName("friends").item(0)).getElementsByTagName("friend");
+                    for (int j = 0; j < friends.getLength(); j++) {
+                        hero.addFriend(friends.item(j).getTextContent());
+                    }
+                    heroes.add(hero);
                 }
             }
         } catch (Exception e) {

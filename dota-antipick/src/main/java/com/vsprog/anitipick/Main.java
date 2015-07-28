@@ -23,7 +23,11 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         HeroesBuilder heroesBuilder = new HeroesBuilder();
-//        List<Image> images = heroesBuilder.loadImageHeroes(heroesBuilder.loadHeroesNames());
+        List<Hero> heroes = heroesBuilder.loadHeroesInfo();
+
+
+
+//        List<Image> images = heroesBuilder.loadImageHeroes(heroesBuilder.loadHeroesInfo());
 
         /*String cssBordering = "-fx-border-color:darkblue ; \n" //#090a0c
                 + "-fx-border-insets:3;\n"
@@ -45,7 +49,7 @@ public class Main extends Application {
 
 /*
         HeroesBuilder heroesBuilder = new HeroesBuilder();
-        List<Image> images = heroesBuilder.loadImageHeroes(heroesBuilder.loadHeroesNames());
+        List<Image> images = heroesBuilder.loadImageHeroes(heroesBuilder.loadHeroesInfo());
 
         StackPane stackPane = new StackPane();
 

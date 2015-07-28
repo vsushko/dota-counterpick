@@ -282,11 +282,11 @@
         <name>Bounty Hunter</name>
         <enemies>
             <!--  против них имба -->
-            <enemy id="16" type="good">Clinkz</enemy>
-            <enemy id="15" type="good">Chen</enemy>
-            <enemy id="109" type="good">Zeus</enemy>
-            <enemy id="43" type="good">Lich</enemy>
-            <enemy id="102" type="good">Warlock</enemy>
+            <!--<enemy id="16" type="good">Clinkz</enemy>-->
+            <!--<enemy id="15" type="good">Chen</enemy>-->
+            <!--<enemy id="109" type="good">Zeus</enemy>-->
+            <!--<enemy id="43" type="good">Lich</enemy>-->
+            <!--<enemy id="102" type="good">Warlock</enemy>-->
 
             <!-- враги -->
             <enemy id="80" type="bad">Slardar</enemy>
@@ -813,11 +813,11 @@
             <enemy id="44" type="bad">Lifestealer</enemy>
 
             <!-- Против кого берем -->
-            <enemy id="85" type="good">Storm Spirit</enemy>
-            <enemy id="35" type="good">Invoker</enemy>
-            <enemy id="3" type="good">Anti-Mage</enemy>
-            <enemy id="61" type="good">Omniknight</enemy>
-            <enemy id="63" type="good">Outworld Devourer</enemy>
+            <!--<enemy id="85" type="good">Storm Spirit</enemy>-->
+            <!--<enemy id="35" type="good">Invoker</enemy>-->
+            <!--<enemy id="3" type="good">Anti-Mage</enemy>-->
+            <!--<enemy id="61" type="good">Omniknight</enemy>-->
+            <!--<enemy id="63" type="good">Outworld Devourer</enemy>-->
         </enemies>
         <friends>
             <friend id="43">Lich</friend>
@@ -967,12 +967,12 @@
             <enemy id="78" type="bad">Silencer</enemy>
 
             <!-- враги, против которых берем героя -->
-            <enemy id="56" type="good">Nature's Prophet</enemy>
-            <enemy id="12" type="good">Broodmother</enemy>
-            <enemy id="31" type="good">Enigma</enemy>
-            <enemy id="15" type="good">Chen</enemy>
-            <enemy id="55" type="good">Naga Siren</enemy>
-            <enemy id="65" type="good">Phantom Lancer</enemy>
+            <!--<enemy id="56" type="good">Nature's Prophet</enemy>-->
+            <!--<enemy id="12" type="good">Broodmother</enemy>-->
+            <!--<enemy id="31" type="good">Enigma</enemy>-->
+            <!--<enemy id="15" type="good">Chen</enemy>-->
+            <!--<enemy id="55" type="good">Naga Siren</enemy>-->
+            <!--<enemy id="65" type="good">Phantom Lancer</enemy>-->
         </enemies>
         <friends>
             <!-- основные связки-->
@@ -1544,17 +1544,17 @@
             <enemy id="78" type="bad">Silencer</enemy>
 
             <!-- против кого можно брать -->
-            <enemy id="12" type="good">Broodmother</enemy>
-            <enemy id="31" type="good">Enigma</enemy>
-            <enemy id="65" type="good">Phantom Lancer</enemy>
-            <enemy id="56" type="good">Nature's Prophet</enemy>
-            <enemy id="14" type="good">Chaos Knight</enemy>
-            <enemy id="55" type="good">Naga Siren</enemy>
-            <enemy id="30" type="good">Enchantress</enemy>
-            <enemy id="15" type="good">Chen</enemy>
-            <enemy id="73" type="good">Rubick</enemy>
-            <enemy id="44" type="good">Lifestealer</enemy>
-            <enemy id="64" type="good">Phantom Assassin</enemy>
+            <!--<enemy id="12" type="good">Broodmother</enemy>-->
+            <!--<enemy id="31" type="good">Enigma</enemy>-->
+            <!--<enemy id="65" type="good">Phantom Lancer</enemy>-->
+            <!--<enemy id="56" type="good">Nature's Prophet</enemy>-->
+            <!--<enemy id="14" type="good">Chaos Knight</enemy>-->
+            <!--<enemy id="55" type="good">Naga Siren</enemy>-->
+            <!--<enemy id="30" type="good">Enchantress</enemy>-->
+            <!--<enemy id="15" type="good">Chen</enemy>-->
+            <!--<enemy id="73" type="good">Rubick</enemy>-->
+            <!--<enemy id="44" type="good">Lifestealer</enemy>-->
+            <!--<enemy id="64" type="good">Phantom Assassin</enemy>-->
         </enemies>
         <friends>
             <friend id="46">Lion</friend>
@@ -1661,14 +1661,14 @@
             <enemy id="35" type="bad">Invoker</enemy>
             <enemy id="5" type="bad">Bane</enemy>
 
-            <enemy id="4" type="good">Axe</enemy>
-            <enemy id="90" type="good">Tidehunter</enemy>
-            <enemy id="98" type="good">Ursa</enemy>
-            <enemy id="83" type="good">Spectre</enemy>
-            <enemy id="68" type="good">Pudge</enemy>
-            <enemy id="80" type="good">Slardar</enemy>
-            <enemy id="1" type="good">Alchemist</enemy>
-            <enemy id="10" type="good">Brewmaster</enemy>
+            <!--<enemy id="4" type="good">Axe</enemy>-->
+            <!--<enemy id="90" type="good">Tidehunter</enemy>-->
+            <!--<enemy id="98" type="good">Ursa</enemy>-->
+            <!--<enemy id="83" type="good">Spectre</enemy>-->
+            <!--<enemy id="68" type="good">Pudge</enemy>-->
+            <!--<enemy id="80" type="good">Slardar</enemy>-->
+            <!--<enemy id="1" type="good">Alchemist</enemy>-->
+            <!--<enemy id="10" type="good">Brewmaster</enemy>-->
         </enemies>
         <friends>
             <friend id="72">Riki</friend>
@@ -1818,9 +1818,9 @@
             <enemy id="27" type="bad">Earthshaker</enemy>
             <enemy id="78" type="bad">Silencer</enemy>
 
-            <enemy id="52" type="good">Meepo</enemy>
-            <enemy id="56" type="good">Nature's Prophet</enemy>
-            <enemy id="98" type="good">Ursa</enemy>
+            <!--<enemy id="52" type="good">Meepo</enemy>-->
+            <!--<enemy id="56" type="good">Nature's Prophet</enemy>-->
+            <!--<enemy id="98" type="good">Ursa</enemy>-->
         </enemies>
         <friends>
             <friend id="74">Sand King</friend>

@@ -2,6 +2,7 @@ package com.vsprog.anitipick;
 
 import javafx.scene.image.Image;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -51,5 +52,19 @@ public class Hero {
 
     public void setEnemies(List<String> enemies) {
         this.enemies = enemies;
+    }
+
+    public void addEnemy(String enemyName) {
+        if (enemies == null) {
+            enemies = new ArrayList<String>();
+        }
+        enemies.add(enemyName);
+    }
+
+    public void addFriend(String friendName) {
+        if (friends == null) {
+            friends = new ArrayList<String>();
+        }
+        friends.add(friendName);
     }
 }
