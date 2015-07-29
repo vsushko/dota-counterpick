@@ -10,6 +10,7 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,6 +25,30 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         HeroesBuilder heroesBuilder = new HeroesBuilder();
         List<Hero> heroes = heroesBuilder.loadHeroesInfo();
+
+        Pick pick = new Pick();
+        pick.setFirstHero(heroesBuilder.getHeroByName(heroes, "Dazzle"));
+        pick.setSecondHero(heroesBuilder.getHeroByName(heroes, "Tusk"));
+        pick.setThirdHero(heroesBuilder.getHeroByName(heroes, "Puck"));
+        pick.setFourthHero(heroesBuilder.getHeroByName(heroes, "Naga Siren"));
+        pick.setFifthHero(heroesBuilder.getHeroByName(heroes, "Anti-Mage"));
+
+        Pick anitiPick = new Pick();
+        List<String> enemies = new ArrayList<String>();
+        enemies.addAll(pick.getFirstHero().getEnemies());
+        enemies.addAll(pick.getSecondHero().getEnemies());
+        enemies.addAll(pick.getThirdHero().getEnemies());
+        enemies.addAll(pick.getFourthHero().getEnemies());
+        enemies.addAll(pick.getFifthHero().getEnemies());
+
+        for (String enemy : enemies) {
+            System.out.println(enemy);
+        }
+
+//        System.out.println(enemies);
+
+
+
 
 
 

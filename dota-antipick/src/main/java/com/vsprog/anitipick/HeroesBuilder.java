@@ -79,4 +79,12 @@ public class HeroesBuilder {
         return heroes;
     }
 
+    public Hero getHeroByName(List<Hero> heroes, String heroName) {
+        for (Hero hero : heroes) {
+            if (hero.getName().equals(heroName)) {
+                return hero;
+            }
+        }
+        return null;
+    }
 }

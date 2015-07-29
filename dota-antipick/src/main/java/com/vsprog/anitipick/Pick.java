@@ -47,8 +47,8 @@ public class Pick {
         this.fifthHero = fifthHero;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return firstHero.getName() + " " + secondHero.getName() + " " + thirdHero.getName() + " " + fourthHero.getName() + " " + fifthHero.getName();
-    }
+    }*/
 }
