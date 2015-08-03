@@ -717,6 +717,7 @@
     <hero id="20">
         <name>Dazzle</name>
         <enemies>
+            <enemy id="4" type="bad">Axe</enemy>
             <enemy id="80" type="bad">Slardar</enemy>
             <enemy id="84" type="bad">Spirit Breaker</enemy>
             <enemy id="32" type="bad">Faceless Void</enemy>
@@ -727,7 +728,6 @@
             <enemy id="23" type="bad">Doom</enemy>
             <enemy id="72" type="bad">Riki</enemy>
             <enemy id="59" type="bad">Nyx Assassin</enemy>
-            <enemy id="4" type="bad">Axe</enemy>
         </enemies>
         <friends>
             <friend id="18">Crystal Maiden</friend>
