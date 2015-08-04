@@ -17,14 +17,14 @@ public class GridViewDemo extends Application {
     @Override
     public void start(Stage stage) {
         Group root = new Group();
-        Scene scene = new Scene(root, 500, 200);
+        Scene scene = new Scene(root, 930, 930);
         stage.setScene(scene);
         stage.setTitle("Dota antipick");
 
         GridPane grid = new GridPane();
         grid.setPadding(new Insets(10, 10, 10, 10));
         grid.setVgap(2);
-        grid.setHgap(5);
+        grid.setHgap(2);
 
         scene.setRoot(grid);
 
@@ -40,15 +40,22 @@ public class GridViewDemo extends Application {
         List<Image> images = heroesBuilder.loadImageHeroes(heroNames);
         System.out.println(images.size());
 
-        for (int i = 0; i < 109; i += 3) {
-            for (int j = 0, k = 0; j < 109 && k < images.size(); j += 3, k++) {
-                ImageView cloud = new ImageView(images.get(k));
-                GridPane.setConstraints(cloud, i, j);
-                grid.getChildren().add(cloud);
+        int heroesCount = heroes.size();
+        int imageColumn = 0;
+        int imageRow = 0;
+
+        for (int i = 0; i < heroesCount; i++) {
+            ImageView imageView = new ImageView(images.get(i));
+            grid.add(imageView, imageColumn, imageRow);
+            imageColumn++;
+
+            if (imageColumn > 7) {
+                imageColumn = 0;
+                imageRow++;
             }
         }
-        stage.show();
 
+        stage.show();
     }
     public static void main(String[] args) {
         launch(args);
