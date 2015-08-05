@@ -80,7 +80,6 @@ public class Main extends Application {
             addHeroWeights(new HeroWeight(heroName, w), weights);
         }
 
-
         for (String heroName : thirdHeroEnemies) {
             int w = 0;
 
@@ -114,33 +113,8 @@ public class Main extends Application {
             addHeroWeights(new HeroWeight(heroName, w), weights);
         }
 
-        /*for (HeroWeight heroWeight : weights) {
-            System.out.println("Герой: " + heroWeight.getHeroName() + " имеет следующий вес " + heroWeight.getHeroWeight() + "  в пятом списке антипика");
-        }*/
-
-
-
         System.out.println(firstHeroEnemies.size() + secondHeroEnemies.size() + thirdHeroEnemies.size() + fourthHeroEnemies.size() + fifthHeroEnemies.size());
 
-
-
-//        List<Image> images = heroesBuilder.loadImageHeroes(heroesBuilder.loadHeroesInfo());
-
-        /*String cssBordering = "-fx-border-color:darkblue ; \n" //#090a0c
-                + "-fx-border-insets:3;\n"
-                + "-fx-border-radius:7;\n"
-                + "-fx-border-width:1.0";
-        ImageView lft = new ImageView(images.get(0));
-
-        HBox top = new HBox();
-        top.getChildren().add(lft);
-        top.setStyle(cssBordering);
-
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("context.fxml"));
-        stage.setTitle("DOTA ANTI PICK v.1.0.0");
-        stage.setScene(new Scene(root));
-        stage.setResizable(false);
-        stage.show();*/
     }
 
     private void addHeroWeights(HeroWeight heroWeight, List<HeroWeight> weights) {
@@ -161,22 +135,3 @@ public class Main extends Application {
         return w;
     }
 }
-
-/*
-        HeroesBuilder heroesBuilder = new HeroesBuilder();
-        List<Image> images = heroesBuilder.loadImageHeroes(heroesBuilder.loadHeroesInfo());
-
-        StackPane stackPane = new StackPane();
-
-        List<ImageView> imageView = new ArrayList<ImageView>();
-        for (Image image : images) {
-            imageView.add(new ImageView(image));
-        }
-
-        stackPane.getChildren().addAll(imageView);
-
-        Scene scene = new Scene(stackPane);
-
-        stage.setScene(scene);
-        stage.setResizable(false);
- */
