@@ -1,7 +1,8 @@
 package com.vsprog.anitipick;
 
 /**
- * Created by vsa on 30.07.2015.
+ * @author vsa
+ * @date 30.07.2015.
  */
 public class HeroWeight {
     private String heroName;

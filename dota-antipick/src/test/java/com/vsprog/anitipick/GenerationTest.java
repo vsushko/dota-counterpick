@@ -1,6 +1,7 @@
 package com.vsprog.anitipick;
 
 
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -302,6 +303,11 @@ public class GenerationTest {
 
         List<String> friends = heroes.get(0).getFriends();
         assertEquals(friends.size(), 7);
+    }
+
+    @Test
+    public void observerTest() {
+
     }
 
 }

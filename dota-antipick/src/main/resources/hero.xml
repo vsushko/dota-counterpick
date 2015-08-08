@@ -1421,6 +1421,7 @@
     <hero id="38">
         <name>Juggernaut</name>
         <enemies>
+            <!-- бкб контрит Crystal Maiden -->
             <enemy id="18" type="bad">Crystal Maiden</enemy>
             <enemy id="100" type="bad">Venomancer</enemy>
             <enemy id="27" type="bad">Earthshaker</enemy>

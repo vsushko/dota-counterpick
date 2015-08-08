@@ -11,7 +11,6 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -22,13 +21,6 @@ public class HeroesBuilder {
 
     private static final String HERO_PATH = "hero.xml";
     private static final String IMAGES_PATH = "images/";
-
-    public List<Image> getHeroesPictures(String resource) {
-//        List<String> names = loadHeroesInfo();
-//        List<Image> images = loadImageHeroes(names);
-
-        return null;
-    }
 
     public List<Image> loadImageHeroes(List<String> names) {
         List<Image> images = new ArrayList<Image>();
