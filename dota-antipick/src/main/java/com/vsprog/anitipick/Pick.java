@@ -96,7 +96,7 @@ public class Pick implements Observable {
                 this.fifthEnemy = hero;
                 break;
             default:
-                break;
+                return;
         }
 
         notifyObservers();

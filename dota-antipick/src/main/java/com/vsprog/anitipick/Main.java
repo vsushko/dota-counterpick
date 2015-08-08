@@ -69,8 +69,6 @@ public class Main extends Application {
             imageView.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
-//                    showMessageDialog(event, heroes, count);
-
                     antiPickDisplay.incrementCurrentCount();
                     Hero hero = heroesBuilder.getHeroByName(heroes, heroes.get(count).getName());
                     pick.addEnemyHeroes(hero, antiPickDisplay.getCurrentCount());
@@ -87,15 +85,7 @@ public class Main extends Application {
         }
 
         stage.show();
-
-        /*// пик противника
-        Pick pick = new Pick();
-        pick.setFirstHero(heroesBuilder.getHeroByName(heroes, "Enigma"));
-        pick.setSecondHero(heroesBuilder.getHeroByName(heroes, "Phantom Lancer"));
-        pick.setThirdHero(heroesBuilder.getHeroByName(heroes, "Medusa"));
-        pick.setFourthHero(heroesBuilder.getHeroByName(heroes, "Axe"));
-        pick.setFifthHero(heroesBuilder.getHeroByName(heroes, "Silencer"));
-
+/*
         // герои антипики
         List<String> firstHeroEnemies = new ArrayList<String>();
         firstHeroEnemies.addAll(pick.getFirstHero().getEnemies());
@@ -184,6 +174,9 @@ public class Main extends Application {
 */
     }
 
+    /**
+     * showMessageDialog(event, heroes, count);
+     */
     private void showMessageDialog(MouseEvent event, List<Hero> heroes, int count) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Hero info");

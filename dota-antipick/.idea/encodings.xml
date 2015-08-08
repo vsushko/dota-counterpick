@@ -4,6 +4,5 @@
     <file url="file://$PROJECT_DIR$/src/main/java/observer/CurrentAntiPickDisplay.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/observer/Observable.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/observer/Observer.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/observer/WeatherStation.java" charset="UTF-8" />
   </component>
 </project>
