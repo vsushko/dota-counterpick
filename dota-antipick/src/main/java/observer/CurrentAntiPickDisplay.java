@@ -1,6 +1,7 @@
 package observer;
 
 import com.vsprog.anitipick.Hero;
+import com.vsprog.anitipick.HeroesBuilder;
 import com.vsprog.anitipick.Pick;
 
 import java.util.*;
@@ -10,13 +11,17 @@ import java.util.*;
  * @date 08.08.2015.
  */
 public class CurrentAntiPickDisplay implements Observer {
+    private List<Hero> heroes;
+
     private Pick pick;
-    private Pick anitiPick;
+    private Pick antiPick;
     private List<String> firstHeroEnemies;
     private List<String> secondHeroEnemies;
     private List<String> thirdHeroEnemies;
     private List<String> fourthHeroEnemies;
     private List<String> fifthHeroEnemies;
+
+    private List<String> heroFriends;
 
     private int currentCount = 0;
 
@@ -31,7 +36,7 @@ public class CurrentAntiPickDisplay implements Observer {
         fourthEnemy = new Hero();
         fifthEnemy = new Hero();
 
-        anitiPick = new Pick();
+        antiPick = new Pick();
 
         firstHeroEnemies = new ArrayList<>();
         secondHeroEnemies = new ArrayList<>();
@@ -39,21 +44,21 @@ public class CurrentAntiPickDisplay implements Observer {
         fourthHeroEnemies = new ArrayList<>();
         fifthHeroEnemies = new ArrayList<>();
 
+        heroFriends = new ArrayList<>();
+
         antiPickHeroes = new HashMap<>();
 
         pick.registerObserver(this);
     }
 
     @Override
-    public void update(Hero firstEnemy, Hero secondEnemy, Hero thirdEnemy, Hero fourthEnemy, Hero fifthEnemy) {
+    public void update(Hero firstHero, Hero secondHero, Hero thirdHero, Hero fourthHero, Hero fifthHero) {
         System.out.println("--------------------------------------------------------------");
-        // вес героя
-        int weight = 0;
+        int weight;
 
         // выбран первый герой
-        if (firstEnemy != null && secondEnemy == null && thirdEnemy == null && fourthEnemy == null && fifthEnemy == null) {
-            firstHeroEnemies.addAll(firstEnemy.getEnemies());
-            weight += 1;
+        if (firstHero != null && secondHero == null && thirdHero == null && fourthHero == null && fifthHero == null) {
+            weight = 1;
 
             for (String heroName : firstHeroEnemies) {
                 antiPickHeroes.put(heroName, weight);
@@ -61,8 +66,8 @@ public class CurrentAntiPickDisplay implements Observer {
         }
 
         // выбран второй герой
-        if (firstEnemy != null && secondEnemy != null && thirdEnemy == null && fourthEnemy == null && fifthEnemy == null) {
-            secondHeroEnemies.addAll(secondEnemy.getEnemies());
+        if (firstHero != null && secondHero != null && thirdHero == null && fourthHero == null && fifthHero == null) {
+            secondHeroEnemies.addAll(secondHero.getEnemies());
             weight = 1;
 
             for (String heroName : secondHeroEnemies) {
@@ -76,8 +81,8 @@ public class CurrentAntiPickDisplay implements Observer {
         }
 
         // выбран третий герой
-        if (firstEnemy != null && secondEnemy != null && thirdEnemy != null && fourthEnemy == null && fifthEnemy == null) {
-            thirdHeroEnemies.addAll(thirdEnemy.getEnemies());
+        if (firstHero != null && secondHero != null && thirdHero != null && fourthHero == null && fifthHero == null) {
+            thirdHeroEnemies.addAll(thirdHero.getEnemies());
             weight = 1;
 
             for (String heroName : thirdHeroEnemies) {
@@ -87,13 +92,12 @@ public class CurrentAntiPickDisplay implements Observer {
                 } else {
                     antiPickHeroes.put(heroName, weight);
                 }
-
             }
         }
 
         // выбран четвертый герой
-        if (firstEnemy != null && secondEnemy != null && thirdEnemy != null && fourthEnemy != null && fifthEnemy == null) {
-            fourthHeroEnemies.addAll(fourthEnemy.getEnemies());
+        if (firstHero != null && secondHero != null && thirdHero != null && fourthHero != null && fifthHero == null) {
+            fourthHeroEnemies.addAll(fourthHero.getEnemies());
             weight = 1;
 
             for (String heroName : fourthHeroEnemies) {
@@ -106,9 +110,9 @@ public class CurrentAntiPickDisplay implements Observer {
             }
         }
 
-        // выбран четвертый герой
-        if (firstEnemy != null && secondEnemy != null && thirdEnemy != null && fourthEnemy != null && fifthEnemy != null) {
-            fifthHeroEnemies.addAll(fifthEnemy.getEnemies());
+        // выбран пятый герой
+        if (firstHero != null && secondHero != null && thirdHero != null && fourthHero != null && fifthHero != null) {
+            fifthHeroEnemies.addAll(fifthHero.getEnemies());
             weight = 1;
 
             for (String heroName : fifthHeroEnemies) {
@@ -121,20 +125,58 @@ public class CurrentAntiPickDisplay implements Observer {
             }
         }
 
-        // извлекаем 5 героев с наибольшим весом
         for (String heroName : antiPickHeroes.keySet()) {
-            if (antiPickHeroes.get(heroName) > 1) {
-                System.out.println(heroName + ": " + antiPickHeroes.get(heroName));
-            }
+            System.out.println(heroName + ": " + antiPickHeroes.get(heroName));
         }
 
         System.out.println("--------------------------------------------------------------");
 
-        this.firstEnemy = firstEnemy != null ? firstEnemy : new Hero();
-        this.secondEnemy = secondEnemy != null ? secondEnemy : new Hero();
-        this.thirdEnemy = thirdEnemy != null ? thirdEnemy : new Hero();
-        this.fourthEnemy = fourthEnemy != null ? fourthEnemy : new Hero();
-        this.fifthEnemy = fifthEnemy != null ? fifthEnemy : new Hero();
+        if (firstHero != null && secondHero != null && thirdHero != null && fourthHero != null && fifthHero != null) {
+
+            for (String heroName : antiPickHeroes.keySet()) {
+
+                // TODO: complete this tomorrow
+
+                /*if (fir)
+
+
+
+
+                heroFriends.addAll(HeroesBuilder.getHeroByName(heroes, heroName).getFriends());
+
+
+
+
+                if (heroFriends.contains(heroName)) {
+                    int weight = antiPickHeroes.get(heroName);
+                    System.out.println("trying to find friends, weigh: " + weight);
+                    antiPickHeroes.put(heroName, weight++);
+                    System.out.println(hero.getName() + " - " + heroName + " with weight: " + weight);
+                }
+*/
+
+            }
+
+            System.out.println("---------------------------------------------");
+            System.out.println("---------------------------------------------");
+            System.out.println("---------------------------------------------");
+            System.out.println("---------------------------------------------");
+            System.out.println("---------------------------------------------");
+
+        }
+
+        // extract 5 heroes with weights
+        for (String heroName : antiPickHeroes.keySet()) {
+                System.out.println(heroName + ": " + antiPickHeroes.get(heroName));
+        }
+
+        System.out.println("--------------------------------------------------------------");
+
+        this.firstEnemy = firstHero != null ? firstHero : new Hero();
+        this.secondEnemy = secondHero != null ? secondHero : new Hero();
+        this.thirdEnemy = thirdHero != null ? thirdHero : new Hero();
+        this.fourthEnemy = fourthHero != null ? fourthHero : new Hero();
+        this.fifthEnemy = fifthHero != null ? fifthHero : new Hero();
 
         display();
     }
@@ -153,5 +195,9 @@ public class CurrentAntiPickDisplay implements Observer {
 
     public void incrementCurrentCount() {
         currentCount++;
+    }
+
+    public void setHeroes(List<Hero> heroes) {
+        this.heroes = heroes;
     }
 }

@@ -57,6 +57,7 @@ public class Main extends Application {
 
         Pick pick = new Pick();
         CurrentAntiPickDisplay antiPickDisplay = new CurrentAntiPickDisplay(pick);
+        antiPickDisplay.setHeroes(heroes);
 
         int heroesCount = heroes.size();
         int imageColumn = 0;
