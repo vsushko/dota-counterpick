@@ -1,5 +1,6 @@
 package observer;
 
+import com.vsprog.anitipick.Bunch;
 import com.vsprog.anitipick.Hero;
 import com.vsprog.anitipick.HeroesBuilder;
 import com.vsprog.anitipick.Pick;
@@ -20,6 +21,8 @@ public class CurrentAntiPickDisplay implements Observer {
     private List<String> thirdHeroEnemies;
     private List<String> fourthHeroEnemies;
     private List<String> fifthHeroEnemies;
+    private List<Bunch> heroesBunch;
+
 
     private List<String> heroFriends;
 
@@ -47,6 +50,7 @@ public class CurrentAntiPickDisplay implements Observer {
         heroFriends = new ArrayList<>();
 
         antiPickHeroes = new HashMap<>();
+        heroesBunch = new ArrayList<>();
 
         pick.registerObserver(this);
     }
@@ -125,50 +129,38 @@ public class CurrentAntiPickDisplay implements Observer {
             }
         }
 
-        for (String heroName : antiPickHeroes.keySet()) {
-            System.out.println(heroName + ": " + antiPickHeroes.get(heroName));
-        }
-
         System.out.println("--------------------------------------------------------------");
 
         if (firstHero != null && secondHero != null && thirdHero != null && fourthHero != null && fifthHero != null) {
 
             for (String heroName : antiPickHeroes.keySet()) {
 
-                // TODO: complete this tomorrow
+                // get hero from anti pick list
+                Hero hero = HeroesBuilder.getHeroByName(heroes, heroName);
 
-                /*if (fir)
+                List<String> friends = hero.getFriends();
 
-
-
-
-                heroFriends.addAll(HeroesBuilder.getHeroByName(heroes, heroName).getFriends());
-
-
-
-
-                if (heroFriends.contains(heroName)) {
-                    int weight = antiPickHeroes.get(heroName);
-                    System.out.println("trying to find friends, weigh: " + weight);
-                    antiPickHeroes.put(heroName, weight++);
-                    System.out.println(hero.getName() + " - " + heroName + " with weight: " + weight);
+                for (String friendHeroName : friends) {
+                    if (antiPickHeroes.containsKey(friendHeroName)) {
+                        heroesBunch.add(new Bunch(heroName, friendHeroName));
+                    }
                 }
-*/
-
             }
+        }
 
-            System.out.println("---------------------------------------------");
-            System.out.println("---------------------------------------------");
-            System.out.println("---------------------------------------------");
-            System.out.println("---------------------------------------------");
-            System.out.println("---------------------------------------------");
+        // TODO: remove doubles
+        // TODO: find triple bunches
 
+        for (Bunch bunch : heroesBunch) {
+            System.out.println(bunch);
         }
 
         // extract 5 heroes with weights
         for (String heroName : antiPickHeroes.keySet()) {
                 System.out.println(heroName + ": " + antiPickHeroes.get(heroName));
         }
+
+
 
         System.out.println("--------------------------------------------------------------");
 
