@@ -142,25 +142,42 @@ public class CurrentAntiPickDisplay implements Observer {
 
                 for (String friendHeroName : friends) {
                     if (antiPickHeroes.containsKey(friendHeroName)) {
-                        heroesBunch.add(new Bunch(heroName, friendHeroName));
+                        Bunch bunch = new Bunch();
+                        bunch.setSecondHero(friendHeroName);
+                        bunch.setFirstHero(heroName);
+
+                        if (!isDoublesExist(heroesBunch, bunch)) {
+                            heroesBunch.add(bunch);
+                        }
                     }
                 }
             }
+
+            for (Bunch bunch : heroesBunch) {
+                String firstHeroName = bunch.getSecondHero();
+                String secondHeroName = bunch.getSecondHero();
+                for (String heroName : antiPickHeroes.keySet()) {
+                    if (secondHeroName.equals(heroName) && !firstHeroName.equals(secondHero)
+                            && !firstHeroName.equals(heroName)) {
+                        System.out.println(new Bunch(firstHeroName, secondHeroName, heroName));
+                    }
+                }
+            }
+
         }
 
-        // TODO: remove doubles
-        // TODO: find triple bunches
+        // TODO: find triple bunches!!!
+
+
 
         for (Bunch bunch : heroesBunch) {
             System.out.println(bunch);
         }
 
         // extract 5 heroes with weights
-        for (String heroName : antiPickHeroes.keySet()) {
-                System.out.println(heroName + ": " + antiPickHeroes.get(heroName));
+        for (String name : antiPickHeroes.keySet()) {
+                System.out.println(name + ": " + antiPickHeroes.get(name));
         }
-
-
 
         System.out.println("--------------------------------------------------------------");
 
@@ -171,6 +188,16 @@ public class CurrentAntiPickDisplay implements Observer {
         this.fifthEnemy = fifthHero != null ? fifthHero : new Hero();
 
         display();
+    }
+
+    private boolean isDoublesExist(List<Bunch> doubles, Bunch doublesBunch) {
+        for (Bunch bunch : doubles) {
+            if (doublesBunch.getFirstHero().equals(bunch.getSecondHero())
+                    && doublesBunch.getSecondHero().equals(bunch.getFirstHero())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void display() {

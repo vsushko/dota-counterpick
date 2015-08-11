@@ -11,6 +11,9 @@ public class Bunch {
     private String fourthHero;
     private String fifthHero;
 
+    public Bunch() {
+    }
+
     public Bunch(String firstHero, String secondHero) {
         this.firstHero = firstHero;
         this.secondHero = secondHero;
