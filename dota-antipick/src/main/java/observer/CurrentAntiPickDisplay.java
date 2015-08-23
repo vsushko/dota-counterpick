@@ -57,7 +57,6 @@ public class CurrentAntiPickDisplay implements Observer {
 
     @Override
     public void update(Hero firstHero, Hero secondHero, Hero thirdHero, Hero fourthHero, Hero fifthHero) {
-        System.out.println("--------------------------------------------------------------");
         int weight;
 
         // выбран первый герой
@@ -129,7 +128,9 @@ public class CurrentAntiPickDisplay implements Observer {
             }
         }
 
-        System.out.println("--------------------------------------------------------------");
+        List<Bunch> triples = new ArrayList<>();
+        List<Bunch> quaternion = new ArrayList<>();
+        List<Bunch> cinque = new ArrayList<>();
 
         if (firstHero != null && secondHero != null && thirdHero != null && fourthHero != null && fifthHero != null) {
 
@@ -154,32 +155,55 @@ public class CurrentAntiPickDisplay implements Observer {
             }
 
             for (Bunch bunch : heroesBunch) {
-                String firstHeroName = bunch.getSecondHero();
                 String secondHeroName = bunch.getSecondHero();
-                for (String heroName : antiPickHeroes.keySet()) {
-                    if (secondHeroName.equals(heroName) && !firstHeroName.equals(secondHero)
-                            && !firstHeroName.equals(heroName)) {
-                        System.out.println(new Bunch(firstHeroName, secondHeroName, heroName));
+                Hero hero = HeroesBuilder.getHeroByName(heroes, secondHeroName);
+
+                // поиск слабой триплы
+                for (String heroName : hero.getFriends()) {
+                    if (!bunch.getFirstHero().equals(heroName)) {
+                        triples.add(new Bunch(bunch.getFirstHero(), bunch.getSecondHero(), heroName));
                     }
                 }
             }
 
+            for (Bunch bunch : triples) {
+                String thirdHeroName = bunch.getThirdHero();
+
+                Hero hero = HeroesBuilder.getHeroByName(heroes, thirdHeroName);
+                // поиск слабой четверки
+                for (String heroName : hero.getFriends()) {
+                    if (!bunch.getFirstHero().equals(heroName) && !bunch.getSecondHero().equals(heroName)) {
+                        quaternion.add(new Bunch(bunch.getFirstHero(), bunch.getSecondHero(), bunch.getThirdHero(), heroName));
+                    }
+                }
+            }
+
+            for (Bunch bunch : quaternion) {
+                String fourthHeroName = bunch.getFourthHero();
+
+                Hero hero = HeroesBuilder.getHeroByName(heroes, fourthHeroName);
+                // поиск слабой четверки
+                for (String heroName : hero.getFriends()) {
+                    if (!bunch.getFirstHero().equals(heroName)
+                            && !bunch.getSecondHero().equals(heroName)
+                            && !bunch.getThirdHero().equals(heroName)
+                            && !bunch.getFourthHero().equals(heroName)) {
+                        cinque.add(new Bunch(bunch.getFirstHero(), bunch.getSecondHero(), bunch.getThirdHero(), bunch.getFourthHero(), heroName));
+                    }
+                }
+            }
         }
 
-        // TODO: find triple bunches!!!
-
-
-
-        for (Bunch bunch : heroesBunch) {
+        /*for (Bunch bunch : cinque) {
             System.out.println(bunch);
         }
+        */
+        System.out.println(cinque.size() == 0 ? "" : cinque.size());
 
         // extract 5 heroes with weights
-        for (String name : antiPickHeroes.keySet()) {
+        /* for (String name : antiPickHeroes.keySet()) {
                 System.out.println(name + ": " + antiPickHeroes.get(name));
-        }
-
-        System.out.println("--------------------------------------------------------------");
+        }*/
 
         this.firstEnemy = firstHero != null ? firstHero : new Hero();
         this.secondEnemy = secondHero != null ? secondHero : new Hero();
@@ -201,11 +225,17 @@ public class CurrentAntiPickDisplay implements Observer {
     }
 
     public void display() {
-        System.out.println("Первый герой: " + firstEnemy.getName());
-        System.out.println("Второй герой: " + secondEnemy.getName());
-        System.out.println("Третий герой: " + thirdEnemy.getName());
-        System.out.println("Четвертый герой: " + fourthEnemy.getName());
-        System.out.println("Пятый герой: " + fifthEnemy.getName());
+        if (fifthEnemy.getName() != null
+                && secondEnemy.getName() != null
+                && thirdEnemy.getName() != null
+                && fourthEnemy.getName() != null) {
+            System.out.println("Первый герой: " + firstEnemy.getName());
+            System.out.println("Второй герой: " + secondEnemy.getName());
+            System.out.println("Третий герой: " + thirdEnemy.getName());
+            System.out.println("Четвертый герой: " + fourthEnemy.getName());
+            System.out.println("Пятый герой: " + fifthEnemy.getName());
+
+        }
     }
 
     public int getCurrentCount() {

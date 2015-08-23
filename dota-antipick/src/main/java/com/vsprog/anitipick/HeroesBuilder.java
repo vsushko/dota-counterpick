@@ -77,6 +77,6 @@ public class HeroesBuilder {
                 return hero;
             }
         }
-        return null;
+        return new Hero();
     }
 }
