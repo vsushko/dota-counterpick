@@ -155,6 +155,7 @@ public class CurrentAntiPickDisplay implements Observer {
             }
 
             for (Bunch bunch : heroesBunch) {
+                String firstHeroName = bunch.getFirstHero();
                 String secondHeroName = bunch.getSecondHero();
                 Hero hero = HeroesBuilder.getHeroByName(heroes, secondHeroName);
 
@@ -165,7 +166,8 @@ public class CurrentAntiPickDisplay implements Observer {
                             && !secondHero.getName().equals(heroName)
                             && !thirdHero.getName().equals(heroName)
                             && !fourthHero.getName().equals(heroName)
-                            && !fifthHero.getName().equals(heroName)) {
+                            && !fifthHero.getName().equals(heroName)
+                            && HeroesBuilder.getHeroByName(heroes, firstHeroName).getFriends().contains(heroName)) {
 
                         triples.add(new Bunch(bunch.getFirstHero(), bunch.getSecondHero(), heroName));
                     }
@@ -173,6 +175,7 @@ public class CurrentAntiPickDisplay implements Observer {
             }
 
             for (Bunch bunch : triples) {
+                String secondHeroName = bunch.getSecondHero();
                 String thirdHeroName = bunch.getThirdHero();
 
                 Hero hero = HeroesBuilder.getHeroByName(heroes, thirdHeroName);
@@ -184,13 +187,15 @@ public class CurrentAntiPickDisplay implements Observer {
                             && !secondHero.getName().equals(heroName)
                             && !thirdHero.getName().equals(heroName)
                             && !fourthHero.getName().equals(heroName)
-                            && !fifthHero.getName().equals(heroName)) {
+                            && !fifthHero.getName().equals(heroName)
+                            && HeroesBuilder.getHeroByName(heroes, secondHeroName).getFriends().contains(heroName)) {
                         quaternion.add(new Bunch(bunch.getFirstHero(), bunch.getSecondHero(), bunch.getThirdHero(), heroName));
                     }
                 }
             }
 
             for (Bunch bunch : quaternion) {
+                String thirdHeroName = bunch.getThirdHero();
                 String fourthHeroName = bunch.getFourthHero();
 
                 Hero hero = HeroesBuilder.getHeroByName(heroes, fourthHeroName);
@@ -204,18 +209,52 @@ public class CurrentAntiPickDisplay implements Observer {
                             && !secondHero.getName().equals(heroName)
                             && !thirdHero.getName().equals(heroName)
                             && !fourthHero.getName().equals(heroName)
-                            && !fifthHero.getName().equals(heroName)) {
+                            && !fifthHero.getName().equals(heroName)
+                            && HeroesBuilder.getHeroByName(heroes, thirdHeroName).getFriends().contains(heroName)) {
                         cinque.add(new Bunch(bunch.getFirstHero(), bunch.getSecondHero(), bunch.getThirdHero(), bunch.getFourthHero(), heroName));
                     }
                 }
             }
         }
 
+        int count = 0;
         for (Bunch bunch : cinque) {
-            System.out.println(bunch);
-        }
+            if (!bunch.getFirstHero().equals(firstHero.getName())
+                    && !bunch.getSecondHero().equals(firstHero.getName())
+                    && !bunch.getThirdHero().equals(firstHero.getName())
+                    && !bunch.getFourthHero().equals(firstHero.getName())
+                    && !bunch.getFifthHero().equals(firstHero.getName())
 
-        System.out.println(cinque.size() == 0 ? "" : cinque.size());
+                    && !bunch.getFirstHero().equals(secondHero.getName())
+                    && !bunch.getSecondHero().equals(secondHero.getName())
+                    && !bunch.getThirdHero().equals(secondHero.getName())
+                    && !bunch.getFourthHero().equals(secondHero.getName())
+                    && !bunch.getFifthHero().equals(secondHero.getName())
+
+                    && !bunch.getFirstHero().equals(thirdHero.getName())
+                    && !bunch.getSecondHero().equals(thirdHero.getName())
+                    && !bunch.getThirdHero().equals(thirdHero.getName())
+                    && !bunch.getFourthHero().equals(thirdHero.getName())
+                    && !bunch.getFifthHero().equals(thirdHero.getName())
+
+                    && !bunch.getFirstHero().equals(fourthHero.getName())
+                    && !bunch.getSecondHero().equals(fourthHero.getName())
+                    && !bunch.getThirdHero().equals(fourthHero.getName())
+                    && !bunch.getFourthHero().equals(fourthHero.getName())
+                    && !bunch.getFifthHero().equals(fourthHero.getName())
+
+                    && !bunch.getFirstHero().equals(fifthHero.getName())
+                    && !bunch.getSecondHero().equals(fifthHero.getName())
+                    && !bunch.getThirdHero().equals(fifthHero.getName())
+                    && !bunch.getFourthHero().equals(fifthHero.getName())
+                    && !bunch.getFifthHero().equals(fifthHero.getName())) {
+                System.out.println(bunch);
+                count++;
+            }
+        }
+        System.out.println(count);
+
+        //System.out.println(cinque.size() == 0 ? "" : cinque.size());
 
         // extract 5 heroes with weights
         /* for (String name : antiPickHeroes.keySet()) {
