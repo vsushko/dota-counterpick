@@ -2,6 +2,7 @@
 <heroes>
     <hero id="0">
         <name>Abaddon</name>
+        <winrate>57.24</winrate>
         <enemies>
             <!-- враги, выжигают ману -->
             <enemy id="3" type="bad">Anti-Mage</enemy>
@@ -41,6 +42,7 @@
     </hero>
     <hero id="1">
         <name>Alchemist</name>
+        <winrate>43.28</winrate>
         <enemies>
             <!-- враги, против которых не берем героя -->
             <!-- сало -->
@@ -81,6 +83,7 @@
     </hero>
     <hero id="2">
         <name>Ancient Apparition</name>
+        <winrate>49.01</winrate>
         <enemies>
             <!-- враги, против которых не берем героя -->
             <!-- дизейблеры -->
@@ -118,6 +121,7 @@
     </hero>
     <hero id="3">
         <name>Anti-Mage</name>
+        <winrate>42.95</winrate>
         <enemies>
             <!-- враги, против которых не берем героя -->
             <enemy id="63" type="bad">Outworld Devourer</enemy>
@@ -148,6 +152,7 @@
     </hero>
     <hero id="4">
         <name>Axe</name>
+        <winrate>49.47</winrate>
         <enemies>
             <enemy id="34" type="bad">Huskar</enemy>
             <enemy id="91" type="bad">Timbersaw</enemy>
@@ -177,6 +182,7 @@
     </hero>
     <hero id="5">
         <name>Bane</name>
+        <winrate>45.30</winrate>
         <enemies>
             <enemy id="78" type="bad">Silencer</enemy>
             <enemy id="25" type="bad">Drow Ranger</enemy>
@@ -203,6 +209,7 @@
     </hero>
     <hero id="6">
         <name>Batrider</name>
+        <winrate>44.74</winrate>
         <enemies>
             <enemy id="46" type="bad">Lion</enemy>
             <enemy id="7" type="bad">Beastmaster</enemy>
@@ -227,6 +234,7 @@
     </hero>
     <hero id="7">
         <name>Beastmaster</name>
+        <winrate>47.96</winrate>
         <enemies>
             <enemy id="77" type="bad">Shadow Shaman</enemy>
             <enemy id="70" type="bad">Queen of Pain</enemy>
@@ -255,6 +263,7 @@
     </hero>
     <hero id="8">
         <name>Bloodseeker</name>
+        <winrate>51.72</winrate>
         <enemies>
             <enemy id="34" type="bad">Huskar</enemy>
             <enemy id="44" type="bad">Lifestealer</enemy>
@@ -280,6 +289,7 @@
     </hero>
     <hero id="9">
         <name>Bounty Hunter</name>
+        <winrate>46.41</winrate>
         <enemies>
             <!--  против них имба -->
             <!--<enemy id="16" type="good">Clinkz</enemy>-->
@@ -319,6 +329,7 @@
     </hero>
     <hero id="10">
         <name>Brewmaster</name>
+        <winrate>50.99</winrate>
         <enemies>
             <enemy id="23" type="bad">Doom</enemy>
             <enemy id="78" type="bad">Silencer</enemy>
@@ -354,6 +365,7 @@
     </hero>
     <hero id="11">
         <name>Bristleback</name>
+        <winrate>49.07</winrate>
         <enemies>
             <enemy id="3" type="bad">Anti-Mage</enemy>
             <enemy id="59" type="bad">Nyx Assassin</enemy>
@@ -447,6 +459,7 @@
     </hero>
     <hero id="12">
         <name>Broodmother</name>
+        <winrate>42.48</winrate>
         <enemies>
             <enemy id="80" type="bad">Slardar</enemy>
             <enemy id="9" type="bad">Bounty Hunter</enemy>
@@ -502,6 +515,7 @@
     </hero>
     <hero id="13">
         <name>Centaur Warrunner</name>
+        <winrate>54.37</winrate>
         <enemies>
             <enemy id="44" type="bad">Lifestealer</enemy>
             <enemy id="3" type="bad">Anti-Mage</enemy>
@@ -527,6 +541,7 @@
     </hero>
     <hero id="14">
         <name>Chaos Knight</name>
+        <winrate>48.20</winrate>
         <enemies>
             <enemy id="70" type="bad">Queen of Pain</enemy>
             <enemy id="23" type="bad">Doom</enemy>
@@ -557,6 +572,7 @@
     </hero>
     <hero id="15">
         <name>Chen</name>
+        <winrate>43.85</winrate>
         <enemies>
             <enemy id="84" type="bad">Spirit Breaker</enemy>
             <enemy id="32" type="bad">Faceless Void</enemy>
@@ -600,6 +616,7 @@
     </hero>
     <hero id="16">
         <name>Clinkz</name>
+        <winrate>43.68</winrate>
         <enemies>
             <enemy id="28" type="bad">Elder Titan</enemy>
             <enemy id="7" type="bad">Beastmaster</enemy>
@@ -625,6 +642,7 @@
     </hero>
     <hero id="17">
         <name>Clockwerk</name>
+        <winrate>50.28</winrate>
         <enemies>
             <enemy id="44" type="bad">Lifestealer</enemy>
             <enemy id="4" type="bad">Axe</enemy>
@@ -644,6 +662,7 @@
     </hero>
     <hero id="18">
         <name>Crystal Maiden</name>
+        <winrate>53.76</winrate>
         <enemies>
             <enemy id="68" type="bad">Pudge</enemy>
             <enemy id="91" type="bad">Timbersaw</enemy>
@@ -685,6 +704,7 @@
     </hero>
     <hero id="19">
         <name>Dark Seer</name>
+        <winrate>48.67</winrate>
         <enemies>
             <enemy id="78" type="bad">Silencer</enemy>
             <enemy id="67" type="bad">Puck</enemy>
@@ -716,6 +736,7 @@
     </hero>
     <hero id="20">
         <name>Dazzle</name>
+        <winrate>52.14</winrate>
         <enemies>
             <enemy id="4" type="bad">Axe</enemy>
             <enemy id="80" type="bad">Slardar</enemy>
@@ -741,6 +762,7 @@
     </hero>
     <hero id="21">
         <name>Death Prophet</name>
+        <winrate>51.88</winrate>
         <enemies>
             <enemy id="78" type="bad">Silencer</enemy>
             <enemy id="3" type="bad">Anti-Mage</enemy>
@@ -776,6 +798,7 @@
     </hero>
     <hero id="22">
         <name>Disruptor</name>
+        <winrate>51.11</winrate>
         <enemies>
             <enemy id="58" type="bad">Night Stalker</enemy>
             <enemy id="8" type="bad">Bloodseeker</enemy>
@@ -805,6 +828,7 @@
     </hero>
     <hero id="23">
         <name>Doom</name>
+        <winrate>47.34</winrate>
         <enemies>
             <enemy id="84" type="bad">Spirit Breaker</enemy>
             <enemy id="49" type="bad">Lycan</enemy>
@@ -833,6 +857,7 @@
     </hero>
     <hero id="24">
         <name>Dragon Knight</name>
+        <winrate>47.79</winrate>
         <enemies>
             <enemy id="46" type="bad">Lion</enemy>
             <enemy id="77" type="bad">Shadow Shaman</enemy>
@@ -889,6 +914,7 @@
     </hero>
     <hero id="25">
         <name>Drow Ranger</name>
+        <winrate>52.06</winrate>
         <enemies>
             <enemy id="72" type="bad">Riki</enemy>
             <enemy id="32" type="bad">Faceless Void</enemy>
@@ -915,6 +941,7 @@
     </hero>
     <hero id="26">
         <name>Earth Spirit</name>
+        <winrate>41.57</winrate>
         <enemies>
             <enemy id="25" type="bad">Drow Ranger</enemy>
             <enemy id="78" type="bad">Silencer</enemy>
@@ -961,6 +988,7 @@
     </hero>
     <hero id="27">
         <name>Earthshaker</name>
+        <winrate>52.02</winrate>
         <type>strength</type>
         <enemies>
             <!-- враги, против которых не берем героя -->
@@ -1024,6 +1052,7 @@
     </hero>
     <hero id="28">
         <name>Elder Titan</name>
+        <winrate>50.43</winrate>
         <enemies>
             <enemy id="63" type="bad">Outworld Devourer</enemy>
             <enemy id="59" type="bad">Nyx Assassin</enemy>
@@ -1054,6 +1083,7 @@
     </hero>
     <hero id="29">
         <name>Ember Spirit</name>
+        <winrate>43.42</winrate>
         <enemies>
             <enemy id="86" type="bad">Sven</enemy>
             <enemy id="93" type="bad">Tiny</enemy>
@@ -1083,6 +1113,7 @@
     </hero>
     <hero id="30">
         <name>Enchantress</name>
+        <winrate>43.51</winrate>
         <enemies>
             <enemy id="15" type="bad">Chen</enemy>
             <enemy id="3" type="bad">Anti-Mage</enemy>
@@ -1102,6 +1133,7 @@
     </hero>
     <hero id="31">
         <name>Enigma</name>
+        <winrate>49.34</winrate>
         <enemies>
             <enemy id="58" type="bad">Night Stalker</enemy>
             <enemy id="25" type="bad">Drow Ranger</enemy>
@@ -1134,6 +1166,7 @@
     </hero>
     <hero id="32">
         <name>Faceless Void</name>
+        <winrate>49.06</winrate>
         <enemies>
             <enemy id="55" type="bad">Naga Siren</enemy>
             <enemy id="75" type="bad">Shadow Demon</enemy>
@@ -1185,6 +1218,7 @@
     </hero>
     <hero id="33">
         <name>Gyrocopter</name>
+        <winrate>47.23</winrate>
         <enemies>
             <enemy id="61" type="bad">Omniknight</enemy>
             <enemy id="25" type="bad">Drow Ranger</enemy>
@@ -1228,6 +1262,7 @@
     </hero>
     <hero id="34">
         <name>Huskar</name>
+        <winrate>47.57</winrate>
         <enemies>
             <enemy id="98" type="bad">Ursa</enemy>
             <enemy id="86" type="bad">Sven</enemy>
@@ -1263,6 +1298,7 @@
     </hero>
     <hero id="35">
         <name>Invoker</name>
+        <winrate>44.76</winrate>
         <enemies>
             <enemy id="7" type="bad">Beastmaster</enemy>
             <enemy id="10" type="bad">Brewmaster</enemy>
@@ -1329,6 +1365,7 @@
     </hero>
     <hero id="36">
         <name>Io</name>
+        <winrate>40.73</winrate>
         <enemies>
             <enemy id="16" type="bad">Clinkz</enemy>
             <enemy id="9" type="bad">Bounty Hunter</enemy>
@@ -1371,6 +1408,7 @@
     </hero>
     <hero id="37">
         <name>Jakiro</name>
+        <winrate>52.62</winrate>
         <enemies>
             <enemy id="55" type="bad">Naga Siren</enemy>
             <enemy id="25" type="bad">Drow Ranger</enemy>
@@ -1420,6 +1458,7 @@
     </hero>
     <hero id="38">
         <name>Juggernaut</name>
+        <winrate>50.27</winrate>
         <enemies>
             <!-- бкб контрит Crystal Maiden -->
             <enemy id="18" type="bad">Crystal Maiden</enemy>
@@ -1447,6 +1486,7 @@
     </hero>
     <hero id="39">
         <name>Keeper of the Light</name>
+        <winrate>50.19</winrate>
         <enemies>
             <enemy id="84" type="bad">Spirit Breaker</enemy>
             <enemy id="32" type="bad">Faceless Void</enemy>
@@ -1501,6 +1541,7 @@
     </hero>
     <hero id="40">
         <name>Kunkka</name>
+        <winrate>48.11</winrate>
         <enemies>
             <enemy id="64" type="bad">Phantom Assassin</enemy>
             <enemy id="32" type="bad">Faceless Void</enemy>
@@ -1529,6 +1570,7 @@
     </hero>
     <hero id="41">
         <name>Legion Commander</name>
+        <winrate>46.03</winrate>
         <enemies>
             <enemy id="108" type="bad">Wraith King</enemy>
             <enemy id="0" type="bad">Abaddon</enemy>
@@ -1569,6 +1611,7 @@
     </hero>
     <hero id="42">
         <name>Leshrac</name>
+        <winrate>50.56</winrate>
         <enemies>
             <enemy id="67" type="bad">Puck</enemy>
             <enemy id="78" type="bad">Silencer</enemy>
@@ -1611,6 +1654,7 @@
     </hero>
     <hero id="43">
         <name>Lich</name>
+        <winrate>54.91</winrate>
         <enemies>
             <enemy id="72" type="bad">Riki</enemy>
             <enemy id="78" type="bad">Silencer</enemy>
@@ -1653,6 +1697,7 @@
     </hero>
     <hero id="44">
         <name>Lifestealer</name>
+        <winrate>47.67</winrate>
         <enemies>
             <enemy id="32" type="bad">Faceless Void</enemy>
             <enemy id="64" type="bad">Phantom Assassin</enemy>
@@ -1687,6 +1732,7 @@
     </hero>
     <hero id="45">
         <name>Lina</name>
+        <winrate>46.56</winrate>
         <enemies>
             <enemy id="3" type="bad">Anti-Mage</enemy>
             <enemy id="78" type="bad">Silencer</enemy>
@@ -1710,6 +1756,7 @@
     </hero>
     <hero id="46">
         <name>Lion</name>
+        <winrate>48.48</winrate>
         <enemies>
             <enemy id="23" type="bad">Doom</enemy>
             <enemy id="78" type="bad">Silencer</enemy>
@@ -1731,6 +1778,7 @@
     </hero>
     <hero id="47">
         <name>Lone Druid</name>
+        <winrate>43.29</winrate>
         <enemies>
             <enemy id="44" type="bad">Lifestealer</enemy>
             <enemy id="10" type="bad">Brewmaster</enemy>
@@ -1763,6 +1811,7 @@
     </hero>
     <hero id="48">
         <name>Luna</name>
+        <winrate>52.51</winrate>
         <enemies>
             <enemy id="46" type="bad">Lion</enemy>
             <enemy id="93" type="bad">Tiny</enemy>
@@ -1784,6 +1833,7 @@
     </hero>
     <hero id="49">
         <name>Lycan</name>
+        <winrate>50.98</winrate>
         <enemies>
             <enemy id="32" type="bad">Faceless Void</enemy>
             <enemy id="3" type="bad">Anti-Mage</enemy>
@@ -1811,6 +1861,7 @@
     </hero>
     <hero id="50">
         <name>Magnus</name>
+        <winrate>45.20</winrate>
         <enemies>
             <enemy id="23" type="bad">Doom</enemy>
             <enemy id="63" type="bad">Outworld Devourer</enemy>
@@ -1849,6 +1900,7 @@
     </hero>
     <hero id="51">
         <name>Medusa</name>
+        <winrate>49.94</winrate>
         <enemies>
             <enemy id="92" type="bad">Tinker</enemy>
             <enemy id="3" type="bad">Anti-Mage</enemy>
@@ -1876,6 +1928,7 @@
     </hero>
     <hero id="52">
         <name>Meepo</name>
+        <winrate>45.70</winrate>
         <enemies>
             <enemy id="27" type="bad">Earthshaker</enemy>
             <enemy id="90" type="bad">Tidehunter</enemy>
@@ -1917,6 +1970,7 @@
     </hero>
     <hero id="53">
         <name>Mirana</name>
+        <winrate>51.77</winrate>
         <enemies><enemy id="23" type="bad">Doom</enemy>
             <enemy id="58" type="bad">Night Stalker</enemy>
             <enemy id="31" type="bad">Enigma</enemy>
@@ -1935,6 +1989,7 @@
     </hero>
     <hero id="54">
         <name>Morphling</name>
+        <winrate>42.32</winrate>
         <enemies>
             <enemy id="35" type="bad">Invoker</enemy>
             <enemy id="70" type="bad">Queen of Pain</enemy>
@@ -1968,6 +2023,7 @@
     </hero>
     <hero id="55">
         <name>Naga Siren</name>
+        <winrate>45.17</winrate>
         <enemies>
             <enemy id="70" type="bad">Queen of Pain</enemy>
             <enemy id="74" type="bad">Sand King</enemy>
@@ -2001,6 +2057,7 @@
     </hero>
     <hero id="56">
         <name>Nature's Prophet</name>
+        <winrate>45.83</winrate>
         <enemies>
             <enemy id="84" type="bad">Spirit Breaker</enemy>
             <enemy id="80" type="bad">Slardar</enemy>
@@ -2045,6 +2102,7 @@
     </hero>
     <hero id="57">
         <name>Necrophos</name>
+        <winrate>56.78</winrate>
         <enemies>
             <enemy id="58" type="bad">Night Stalker</enemy>
             <enemy id="25" type="bad">Drow Ranger</enemy>
@@ -2069,6 +2127,7 @@
     </hero>
     <hero id="58">
         <name>Night Stalker</name>
+        <winrate>49.80</winrate>
         <enemies>
             <enemy id="7" type="bad">Beastmaster</enemy>
             <enemy id="12" type="bad">Broodmother</enemy>
@@ -2114,6 +2173,7 @@
     </hero>
     <hero id="59">
         <name>Nyx Assassin</name>
+        <winrate>48.73</winrate>
         <enemies>
             <enemy id="92" type="bad">Tinker</enemy>
             <enemy id="3" type="bad">Anti-Mage</enemy>
@@ -2148,6 +2208,7 @@
     </hero>
     <hero id="60">
         <name>Ogre Magi</name>
+        <winrate>52.42</winrate>
         <enemies>
             <enemy id="44" type="bad">Lifestealer</enemy>
             <enemy id="78" type="bad">Silencer</enemy>
@@ -2170,6 +2231,7 @@
     </hero>
     <hero id="61">
         <name>Omniknight</name>
+        <winrate>56.73</winrate>
         <enemies>
             <enemy id="3" type="bad">Anti-Mage</enemy>
             <enemy id="39" type="bad">Keeper of the Light</enemy>
@@ -2191,6 +2253,7 @@
     </hero>
     <hero id="62">
         <name>Oracle</name>
+        <winrate>41.14</winrate>
         <enemies>
             <enemy id="79" type="bad">Skywrath Mage</enemy>
             <enemy id="78" type="bad">Silencer</enemy>
@@ -2225,6 +2288,7 @@
     </hero>
     <hero id="63">
         <name>Outworld Devourer</name>
+        <winrate>44.90</winrate>
         <enemies>
             <enemy id="59" type="bad">Nyx Assassin</enemy>
             <enemy id="69" type="bad">Pugna</enemy>
@@ -2250,6 +2314,7 @@
     </hero>
     <hero id="64">
         <name>Phantom Assassin</name>
+        <winrate>47.85</winrate>
         <enemies>
             <enemy id="93" type="bad">Tiny</enemy>
             <enemy id="68" type="bad">Pudge</enemy>
@@ -2302,6 +2367,7 @@
     </hero>
     <hero id="65">
         <name>Phantom Lancer</name>
+        <winrate>50.90</winrate>
         <enemies>
             <enemy id="42" type="bad">Leshrac</enemy>
             <enemy id="90" type="bad">Tidehunter</enemy>
@@ -2326,6 +2392,7 @@
     </hero>
     <hero id="66">
         <name>Phoenix</name>
+        <winrate>49.34</winrate>
         <enemies>
             <enemy id="34" type="bad">Huskar</enemy>
             <enemy id="96" type="bad">Troll Warlord</enemy>
@@ -2356,6 +2423,7 @@
     </hero>
     <hero id="67">
         <name>Puck</name>
+        <winrate>43.37</winrate>
         <enemies>
             <enemy id="32" type="bad">Faceless Void</enemy>
             <enemy id="54" type="bad">Morphling</enemy>
@@ -2384,6 +2452,7 @@
     </hero>
     <hero id="68">
         <name>Pudge</name>
+        <winrate>48.90</winrate>
         <enemies>
             <enemy id="63" type="bad">Outworld Devourer</enemy>
             <enemy id="34" type="bad">Huskar</enemy>
@@ -2414,6 +2483,7 @@
     </hero>
     <hero id="69">
         <name>Pugna</name>
+        <winrate>46.73</winrate>
         <enemies>
             <enemy id="85" type="bad">Storm Spirit</enemy>
             <enemy id="8" type="bad">Bloodseeker</enemy>
@@ -2456,6 +2526,7 @@
     </hero>
     <hero id="70">
         <name>Queen of Pain</name>
+        <winrate>44.88</winrate>
         <enemies>
             <enemy id="8" type="bad">Bloodseeker</enemy>
             <enemy id="22" type="bad">Disruptor</enemy>
@@ -2496,6 +2567,7 @@
     </hero>
     <hero id="71">
         <name>Razor</name>
+        <winrate>49.87</winrate>
         <enemies>
             <enemy id="98" type="bad">Ursa</enemy>
             <enemy id="93" type="bad">Tiny</enemy>
@@ -2521,6 +2593,7 @@
     </hero>
     <hero id="72">
         <name>Riki</name>
+        <winrate>52.45</winrate>
         <enemies>
             <enemy id="80" type="bad">Slardar</enemy>
             <enemy id="9" type="bad">Bounty Hunter</enemy>
@@ -2539,6 +2612,7 @@
     </hero>
     <hero id="73">
         <name>Rubick</name>
+        <winrate>44.85</winrate>
         <enemies>
             <enemy id="68" type="bad">Pudge</enemy>
             <enemy id="32" type="bad">Faceless Void</enemy>
@@ -2567,6 +2641,7 @@
     </hero>
     <hero id="74">
         <name>Sand King</name>
+        <winrate>49.36</winrate>
         <enemies>
             <enemy id="78" type="bad">Silencer</enemy>
             <enemy id="90" type="bad">Tidehunter</enemy>
@@ -2601,6 +2676,7 @@
     </hero>
     <hero id="75">
         <name>Shadow Demon</name>
+        <winrate>42.07</winrate>
         <enemies>
             <enemy id="93" type="bad">Tiny</enemy>
             <enemy id="68" type="bad">Pudge</enemy>
@@ -2637,6 +2713,7 @@
     </hero>
     <hero id="76">
         <name>Shadow Fiend</name>
+        <winrate>49.50</winrate>
         <enemies>
             <enemy id="9" type="bad">Bounty Hunter</enemy>
             <enemy id="72" type="bad">Riki</enemy>
@@ -2684,6 +2761,7 @@
     </hero>
     <hero id="77">
         <name>Shadow Shaman</name>
+        <winrate>50.55</winrate>
         <enemies>
             <enemy id="93" type="bad">Tiny</enemy>
             <enemy id="23" type="bad">Doom</enemy>
@@ -2705,6 +2783,7 @@
     </hero>
     <hero id="78">
         <name>Silencer</name>
+        <winrate>53.63</winrate>
         <enemies>
             <enemy id="59" type="bad">Nyx Assassin</enemy>
             <enemy id="55" type="bad">Naga Siren</enemy>
@@ -2727,6 +2806,7 @@
     </hero>
     <hero id="79">
         <name>Skywrath Mage</name>
+        <winrate>45.85</winrate>
         <enemies>
             <enemy id="3" type="bad">Anti-Mage</enemy>
             <enemy id="83" type="bad">Spectre</enemy>
@@ -2792,6 +2872,7 @@
     </hero>
     <hero id="80">
         <name>Slardar</name>
+        <winrate>52.13</winrate>
         <enemies>
             <enemy id="5" type="bad">Bane</enemy>
             <enemy id="3" type="bad">Anti-Mage</enemy>
@@ -2824,6 +2905,7 @@
     </hero>
     <hero id="81">
         <name>Slark</name>
+        <winrate>50.76</winrate>
         <enemies>
             <enemy id="109" type="bad">Zeus</enemy>
             <enemy id="23" type="bad">Doom</enemy>
@@ -2843,6 +2925,7 @@
     </hero>
     <hero id="82">
         <name>Sniper</name>
+        <winrate>49.90</winrate>
         <enemies>
             <enemy id="99" type="bad">Vengeful Spirit</enemy>
             <enemy id="86" type="bad">Sven</enemy>
@@ -2860,6 +2943,7 @@
     </hero>
     <hero id="83">
         <name>Spectre</name>
+        <winrate>54.04</winrate>
         <enemies>
             <enemy id="5" type="bad">Bane</enemy>
             <enemy id="32" type="bad">Faceless Void</enemy>
@@ -2895,6 +2979,7 @@
     </hero>
     <hero id="84">
         <name>Spirit Breaker</name>
+        <winrate>53.14</winrate>
         <enemies>
             <enemy id="44" type="bad">Lifestealer</enemy>
             <enemy id="58" type="bad">Night Stalker</enemy>
@@ -2923,6 +3008,7 @@
     </hero>
     <hero id="85">
         <name>Storm Spirit</name>
+        <winrate>46.60</winrate>
         <enemies>
             <enemy id="3" type="bad">Anti-Mage</enemy>
             <enemy id="78" type="bad">Silencer</enemy>
@@ -2955,6 +3041,7 @@
     </hero>
     <hero id="86">
         <name>Sven</name>
+        <winrate>51.27</winrate>
         <enemies>
             <enemy id="71" type="bad">Razor</enemy>
             <enemy id="3" type="bad">Anti-Mage</enemy>
@@ -2988,6 +3075,7 @@
     </hero>
     <hero id="87">
         <name>Techies</name>
+        <winrate>48.91</winrate>
         <enemies>
             <enemy id="61" type="bad">Omniknight</enemy>
             <enemy id="108" type="bad">Wraith King</enemy>
@@ -3041,6 +3129,7 @@
     </hero>
     <hero id="88">
         <name>Templar Assassin</name>
+        <winrate>45.84</winrate>
         <enemies>
             <enemy id="2" type="bad">Ancient Apparition</enemy>
             <enemy id="100" type="bad">Venomancer</enemy>
@@ -3065,6 +3154,7 @@
     </hero>
     <hero id="89">
         <name>Terrorblade</name>
+        <winrate>46.75</winrate>
         <enemies>
             <enemy id="19" type="bad">Dark Seer</enemy>
             <enemy id="54" type="bad">Morphling</enemy>
@@ -3097,6 +3187,7 @@
     </hero>
     <hero id="90">
         <name>Tidehunter</name>
+        <winrate>51.97</winrate>
         <enemies>
             <enemy id="7" type="bad">Beastmaster</enemy>
             <enemy id="94" type="bad">Treant Protector</enemy>
@@ -3150,6 +3241,7 @@
     </hero>
     <hero id="91">
         <name>Timbersaw</name>
+        <winrate>46.09</winrate>
         <enemies>
             <enemy id="78" type="bad">Silencer</enemy>
             <enemy id="5" type="bad">Bane</enemy>
@@ -3201,6 +3293,7 @@
     </hero>
     <hero id="92">
         <name>Tinker</name>
+        <winrate>43.58</winrate>
         <enemies>
             <enemy id="78" type="bad">Silencer</enemy>
             <enemy id="23" type="bad">Doom</enemy>
@@ -3243,6 +3336,7 @@
     </hero>
     <hero id="93">
         <name>Tiny</name>
+        <winrate>47.29</winrate>
         <enemies>
             <enemy id="3" type="bad">Anti-Mage</enemy>
             <enemy id="99" type="bad">Vengeful Spirit</enemy>
@@ -3277,6 +3371,7 @@
     </hero>
     <hero id="94">
         <name>Treant Protector</name>
+        <winrate>52.39</winrate>
         <enemies>
             <enemy id="23" type="bad">Doom</enemy>
             <enemy id="83" type="bad">Spectre</enemy>
@@ -3325,6 +3420,7 @@
     </hero>
     <hero id="95">
         <name>Tusk</name>
+        <winrate>45.94</winrate>
         <enemies>
             <enemy id="80" type="bad">Slardar</enemy>
             <enemy id="13" type="bad">Centaur Warrunner</enemy>
@@ -3351,6 +3447,7 @@
     </hero>
     <hero id="96">
         <name>Troll Warlord</name>
+        <winrate>51.50</winrate>
         <enemies>
             <enemy id="13" type="bad">Centaur Warrunner</enemy>
             <enemy id="4" type="bad">Axe</enemy>
@@ -3403,6 +3500,7 @@
     </hero>
     <hero id="97">
         <name>Undying</name>
+        <winrate>53.01</winrate>
         <enemies>
             <enemy id="44" type="bad">Lifestealer</enemy>
             <enemy id="4" type="bad">Axe</enemy>
@@ -3441,6 +3539,7 @@
     </hero>
     <hero id="98">
         <name>Ursa</name>
+        <winrate>53.65</winrate>
         <enemies>
             <enemy id="65" type="bad">Phantom Lancer</enemy>
             <enemy id="55" type="bad">Naga Siren</enemy>
@@ -3509,6 +3608,7 @@
     </hero>
     <hero id="99">
         <name>Vengeful Spirit</name>
+        <winrate>53.67</winrate>
         <enemies>
             <enemy id="83" type="bad">Spectre</enemy>
             <enemy id="109" type="bad">Zeus</enemy>
@@ -3536,6 +3636,7 @@
     </hero>
     <hero id="100">
         <name>Venomancer</name>
+        <winrate>52.69</winrate>
         <enemies>
             <enemy id="23" type="bad">Doom</enemy>
             <enemy id="3" type="bad">Anti-Mage</enemy>
@@ -3567,6 +3668,7 @@
     </hero>
     <hero id="101">
         <name>Viper</name>
+        <winrate>52.19</winrate>
         <enemies>
             <enemy id="5" type="bad">Bane</enemy>
             <enemy id="72" type="bad">Riki</enemy>
@@ -3588,6 +3690,7 @@
     </hero>
     <hero id="102">
         <name>Warlock</name>
+        <winrate>55.03</winrate>
         <enemies>
             <enemy id="68" type="bad">Pudge</enemy>
             <enemy id="59" type="bad">Nyx Assassin</enemy>
@@ -3613,6 +3716,7 @@
     </hero>
     <hero id="103">
         <name>Visage</name>
+        <winrate>45.81</winrate>
         <enemies>
             <enemy id="98" type="bad">Ursa</enemy>
             <enemy id="44" type="bad">Lifestealer</enemy>
@@ -3657,6 +3761,7 @@
     </hero>
     <hero id="104">
         <name>Weaver</name>
+        <winrate>49.04</winrate>
         <enemies>
             <enemy id="23" type="bad">Doom</enemy>
             <enemy id="78" type="bad">Silencer</enemy>
@@ -3685,6 +3790,7 @@
     </hero>
     <hero id="105">
         <name>Windranger</name>
+        <winrate>46.07</winrate>
         <enemies>
             <enemy id="68" type="bad">Pudge</enemy>
             <enemy id="23" type="bad">Doom</enemy>
@@ -3714,6 +3820,7 @@
     </hero>
     <hero id="106">
         <name>Winter Wyvern</name>
+        <winrate>48.71</winrate>
         <enemies>
             <enemy id="67" type="bad">Puck</enemy>
             <enemy id="46" type="bad">Lion</enemy>
@@ -3729,6 +3836,7 @@
     </hero>
     <hero id="107">
         <name>Witch Doctor</name>
+        <winrate>52.57</winrate>
         <enemies>
             <enemy id="3" type="bad">Anti-Mage</enemy>
             <enemy id="65" type="bad">Phantom Lancer</enemy>
@@ -3751,6 +3859,7 @@
     </hero>
     <hero id="108">
         <name>Wraith King</name>
+        <winrate>55.06</winrate>
         <enemies>
             <enemy id="86" type="bad">Sven</enemy>
             <enemy id="99" type="bad">Vengeful Spirit</enemy>
@@ -3774,6 +3883,7 @@
     </hero>
     <hero id="109">
         <name>Zeus</name>
+        <winrate>56.01</winrate>
         <enemies>
             <enemy id="3" type="bad">Anti-Mage</enemy>
             <enemy id="23" type="bad">Doom</enemy>
