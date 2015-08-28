@@ -52,6 +52,7 @@ public class HeroesBuilder {
                     Element element = (Element) node;
                     hero = new Hero();
                     hero.setName(element.getElementsByTagName("name").item(0).getTextContent());
+                    hero.setWinrate(Double.valueOf(element.getElementsByTagName("winrate").item(0).getTextContent()));
 
                     NodeList enemies = ((DeferredElementImpl) ((Element) node).getElementsByTagName("enemies").item(0)).getElementsByTagName("enemy");
                     for (int j = 0; j < enemies.getLength(); j++) {

@@ -217,6 +217,8 @@ public class CurrentAntiPickDisplay implements Observer {
             }
         }
 
+        Map<Double, Bunch> finalResultList = new HashMap<Double, Bunch>();
+
         int count = 0;
         for (Bunch bunch : cinque) {
             if (!bunch.getFirstHero().equals(firstHero.getName())
@@ -248,18 +250,56 @@ public class CurrentAntiPickDisplay implements Observer {
                     && !bunch.getThirdHero().equals(fifthHero.getName())
                     && !bunch.getFourthHero().equals(fifthHero.getName())
                     && !bunch.getFifthHero().equals(fifthHero.getName())) {
-                System.out.println(bunch);
+
+                Hero bFirst = HeroesBuilder.getHeroByName(heroes, bunch.getFirstHero());
+                Hero bSecond = HeroesBuilder.getHeroByName(heroes, bunch.getSecondHero());
+                Hero bThird = HeroesBuilder.getHeroByName(heroes, bunch.getThirdHero());
+                Hero bFour = HeroesBuilder.getHeroByName(heroes, bunch.getFourthHero());
+                Hero bFive = HeroesBuilder.getHeroByName(heroes, bunch.getFifthHero());
+
+                double winRateSum = bFirst.getWinrate()
+                        + bSecond.getWinrate()
+                        + bThird.getWinrate()
+                        + bFour.getWinrate()
+                        + bFive.getWinrate();
+
+                bunch.setWinRateSum(winRateSum);
+                finalResultList.put(winRateSum, bunch);
+
+                //System.out.println(bunch);
                 count++;
             }
         }
-        System.out.println(count);
 
-        //System.out.println(cinque.size() == 0 ? "" : cinque.size());
+        if (firstHero != null && secondHero != null && thirdHero != null && fourthHero != null && fifthHero != null) {
+            Map<Double, Bunch> treeMap = new TreeMap<Double, Bunch>(new Comparator<Double>() {
+                @Override
+                public int compare(Double o1, Double o2) {
+                    return o2.compareTo(o1);
+                }
+            });
 
-        // extract 5 heroes with weights
-        /* for (String name : antiPickHeroes.keySet()) {
-                System.out.println(name + ": " + antiPickHeroes.get(name));
-        }*/
+            treeMap.putAll(finalResultList);
+
+            int threeCount = 0;
+
+            double totalWinRate = + firstHero.getWinrate()
+                    + secondHero.getWinrate()
+                    + thirdHero.getWinrate()
+                    + fourthHero.getWinrate()
+                    + fifthHero.getWinrate();
+
+            System.out.println("Heroes win rate: " + totalWinRate + "\n");
+
+            for (Bunch finalBunch : treeMap.values()) {
+                if (threeCount < 3) {
+                    System.out.println(finalBunch + " | win rate summ: " + finalBunch.getWinRateSum());
+                }
+                threeCount++;
+            }
+            System.out.println("\n");
+        }
+
 
         this.firstEnemy = firstHero != null ? firstHero : new Hero();
         this.secondEnemy = secondHero != null ? secondHero : new Hero();
@@ -285,12 +325,11 @@ public class CurrentAntiPickDisplay implements Observer {
                 && secondEnemy.getName() != null
                 && thirdEnemy.getName() != null
                 && fourthEnemy.getName() != null) {
-            System.out.println("Первый герой: " + firstEnemy.getName());
-            System.out.println("Второй герой: " + secondEnemy.getName());
-            System.out.println("Третий герой: " + thirdEnemy.getName());
-            System.out.println("Четвертый герой: " + fourthEnemy.getName());
-            System.out.println("Пятый герой: " + fifthEnemy.getName());
-
+            System.out.println("First hero: " + firstEnemy.getName());
+            System.out.println("Second hero: " + secondEnemy.getName());
+            System.out.println("Third hero: " + thirdEnemy.getName());
+            System.out.println("Fourth hero: " + fourthEnemy.getName());
+            System.out.println("Fifth hero: " + fifthEnemy.getName());
         }
     }
 

@@ -10,6 +10,7 @@ public class Bunch {
     private String thirdHero;
     private String fourthHero;
     private String fifthHero;
+    private double winRateSum;
 
     public Bunch() {
     }
@@ -78,6 +79,14 @@ public class Bunch {
 
     public void setFifthHero(String fifthHero) {
         this.fifthHero = fifthHero;
+    }
+
+    public double getWinRateSum() {
+        return winRateSum;
+    }
+
+    public void setWinRateSum(double winRateSum) {
+        this.winRateSum = winRateSum;
     }
 
     public String toString() {

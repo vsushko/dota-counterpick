@@ -13,6 +13,7 @@ public class Hero {
     private Image image;
     private List<String> friends;
     private List<String> enemies;
+    private double winrate;
 
     public Hero() {
     }
@@ -52,6 +53,14 @@ public class Hero {
 
     public void setEnemies(List<String> enemies) {
         this.enemies = enemies;
+    }
+
+    public double getWinrate() {
+        return winrate;
+    }
+
+    public void setWinrate(double winrate) {
+        this.winrate = winrate;
     }
 
     public void addEnemy(String enemyName) {
