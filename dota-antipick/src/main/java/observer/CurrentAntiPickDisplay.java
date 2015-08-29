@@ -1,9 +1,6 @@
 package observer;
 
-import com.vsprog.anitipick.Bunch;
-import com.vsprog.anitipick.Hero;
-import com.vsprog.anitipick.HeroesBuilder;
-import com.vsprog.anitipick.Pick;
+import com.vsprog.anitipick.*;
 
 import java.util.*;
 
@@ -23,13 +20,15 @@ public class CurrentAntiPickDisplay implements Observer {
     private List<String> fifthHeroEnemies;
     private List<Bunch> heroesBunch;
 
-
     private List<String> heroFriends;
 
     private int currentCount = 0;
 
     private Hero firstEnemy, secondEnemy, thirdEnemy, fourthEnemy, fifthEnemy;
     private Map<String, Integer> antiPickHeroes;
+
+    private OutputInfo outputInfo;
+    private boolean isAnalyzed = false;
 
     public CurrentAntiPickDisplay(Pick pick) {
         this.pick = pick;
@@ -51,6 +50,8 @@ public class CurrentAntiPickDisplay implements Observer {
 
         antiPickHeroes = new HashMap<>();
         heroesBunch = new ArrayList<>();
+
+        outputInfo = new OutputInfo();
 
         pick.registerObserver(this);
     }
@@ -266,7 +267,6 @@ public class CurrentAntiPickDisplay implements Observer {
                 bunch.setWinRateSum(winRateSum);
                 finalResultList.put(winRateSum, bunch);
 
-                //System.out.println(bunch);
                 count++;
             }
         }
@@ -283,23 +283,42 @@ public class CurrentAntiPickDisplay implements Observer {
 
             int threeCount = 0;
 
-            double totalWinRate = + firstHero.getWinrate()
+            double totalWinRate = firstHero.getWinrate()
                     + secondHero.getWinrate()
                     + thirdHero.getWinrate()
                     + fourthHero.getWinrate()
                     + fifthHero.getWinrate();
 
-            System.out.println("Heroes win rate: " + totalWinRate + "\n");
+            System.out.println("Heroes pick win rate: " + totalWinRate + "\n");
+
+            Bunch pickBunch = new Bunch(firstHero.getName(),
+                    secondHero.getName(),
+                    thirdHero.getName(),
+                    fourthHero.getName(),
+                    fifthHero.getName()
+            );
+
+            pickBunch.setWinRateSum(firstHero.getWinrate()
+                    + secondHero.getWinrate()
+                    + thirdHero.getWinrate()
+                    + fourthHero.getWinrate()
+                    + fifthHero.getWinrate()
+            );
+
+            outputInfo.setPickBunch(pickBunch);
 
             for (Bunch finalBunch : treeMap.values()) {
                 if (threeCount < 3) {
                     System.out.println(finalBunch + " | win rate summ: " + finalBunch.getWinRateSum());
+                    outputInfo.addBunch(finalBunch);
+                } else {
+                    isAnalyzed = true;
+                    break;
                 }
                 threeCount++;
             }
             System.out.println("\n");
         }
-
 
         this.firstEnemy = firstHero != null ? firstHero : new Hero();
         this.secondEnemy = secondHero != null ? secondHero : new Hero();
@@ -343,5 +362,13 @@ public class CurrentAntiPickDisplay implements Observer {
 
     public void setHeroes(List<Hero> heroes) {
         this.heroes = heroes;
+    }
+
+    public OutputInfo getFinalOutputInfo() {
+        return outputInfo;
+    }
+
+    public boolean isAnalyzed() {
+        return isAnalyzed;
     }
 }

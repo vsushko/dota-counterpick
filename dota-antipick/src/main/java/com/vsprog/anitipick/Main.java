@@ -6,10 +6,13 @@ import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
 import observer.CurrentAntiPickDisplay;
 
@@ -58,6 +61,7 @@ public class Main extends Application {
         Pick pick = new Pick();
         CurrentAntiPickDisplay antiPickDisplay = new CurrentAntiPickDisplay(pick);
         antiPickDisplay.setHeroes(heroes);
+        OutputInfo outputInfo = new OutputInfo();
 
         int heroesCount = heroes.size();
         int imageColumn = 0;
@@ -73,6 +77,9 @@ public class Main extends Application {
                     antiPickDisplay.incrementCurrentCount();
                     Hero hero = heroesBuilder.getHeroByName(heroes, heroes.get(count).getName());
                     pick.addEnemyHeroes(hero, antiPickDisplay.getCurrentCount());
+                    if (antiPickDisplay.isAnalyzed()) {
+                        showMessageDialog(antiPickDisplay.getFinalOutputInfo());
+                    }
                 }
             });
 
@@ -89,14 +96,46 @@ public class Main extends Application {
     }
 
     /**
-     * showMessageDialog(event, heroes, count);
+     * showMessageDialog();
      */
-    private void showMessageDialog(MouseEvent event, List<Hero> heroes, int count) {
+    private void showMessageDialog(OutputInfo outputInfo) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Hero info");
-        alert.setContentText("This is " + heroes.get(count).getName());
+        alert.setTitle("Application info");
+        alert.setHeaderText("Antipick");
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+        stringBuilder.append(outputInfo.getPickBunch()
+                + "win rate: "
+                + String.valueOf(outputInfo.getPickBunch().getWinRateSum())
+                + "\n\n"
+        );
+
+        for (Bunch bunch : outputInfo.getBunches()) {
+            stringBuilder.append(bunch + " | win rate sum : " + bunch.getWinRateSum() + "\n");
+        }
+
+        TextArea textArea = new TextArea();
+        textArea.setEditable(false);
+        textArea.setMaxWidth(Double.MAX_VALUE);
+        textArea.setMaxHeight(Double.MAX_VALUE);
+        textArea.setText(stringBuilder.toString());
+        GridPane.setVgrow(textArea, Priority.ALWAYS);
+        GridPane.setHgrow(textArea, Priority.ALWAYS);
+
+        GridPane outputInfoContent = new GridPane();
+        outputInfoContent.setMaxWidth(Double.MAX_VALUE);
+
+        Label label = new Label();
+        label.setText("Antipick with maximum win rate summ:");
+
+        outputInfoContent.add(label, 0, 0);
+        outputInfoContent.add(textArea, 0, 0);
+
+        alert.getDialogPane().setExpandableContent(outputInfoContent);
+        alert.getDialogPane().setExpanded(true);
+
         alert.showAndWait();
-        event.consume();
     }
 
 }
