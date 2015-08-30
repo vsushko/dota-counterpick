@@ -1,4 +1,4 @@
-package com.vsprog.anitipick;
+package com.vsprog.counterpick;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -16,7 +16,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import observer.CurrentAntiPickDisplay;
+import observer.CurrentCounterpickDisplay;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ import java.util.List;
 public class Main extends Application {
     public static final int ROW_COUNT = 7;
     public static final int GAPS_LENGTH = 2;
-    private CurrentAntiPickDisplay antiPickDisplay;
+    private CurrentCounterpickDisplay currentCounterpickDisplay;
     private Pick pick;
 
     public static void main(String[] args) throws IOException {
@@ -53,10 +53,10 @@ public class Main extends Application {
         clearItem.setAccelerator(new KeyCodeCombination(KeyCode.C, KeyCombination.CONTROL_DOWN));
         clearItem.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
-                antiPickDisplay.setCurrentCount(0);
+                currentCounterpickDisplay.setCurrentCount(0);
                 pick.clearPick();
-                antiPickDisplay.setIsAnalyzed(false);
-                antiPickDisplay.getFinalOutputInfo().clearOutputInfo();
+                currentCounterpickDisplay.setIsAnalyzed(false);
+                currentCounterpickDisplay.getFinalOutputInfo().clearOutputInfo();
 
             }
         });
@@ -86,8 +86,8 @@ public class Main extends Application {
         System.out.println(images.size());
 
         pick = new Pick();
-        antiPickDisplay = new CurrentAntiPickDisplay(pick);
-        antiPickDisplay.setHeroes(heroes);
+        currentCounterpickDisplay = new CurrentCounterpickDisplay(pick);
+        currentCounterpickDisplay.setHeroes(heroes);
         OutputInfo outputInfo = new OutputInfo();
 
         int heroesCount = heroes.size();
@@ -100,12 +100,12 @@ public class Main extends Application {
             final int count = i;
             imageView.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 public void handle(MouseEvent event) {
-                    antiPickDisplay.incrementCurrentCount();
+                    currentCounterpickDisplay.incrementCurrentCount();
                     Hero hero = heroesBuilder.getHeroByName(heroes, heroes.get(count).getName());
-                    pick.addEnemyHeroes(hero, antiPickDisplay.getCurrentCount());
+                    pick.addEnemyHeroes(hero, currentCounterpickDisplay.getCurrentCount());
 
-                    if (antiPickDisplay.isAnalyzed()) {
-                        showMessageDialog(antiPickDisplay.getFinalOutputInfo());
+                    if (currentCounterpickDisplay.isAnalyzed()) {
+                        showMessageDialog(currentCounterpickDisplay.getFinalOutputInfo());
                     }
                 }
             });
@@ -127,7 +127,7 @@ public class Main extends Application {
     private void showMessageDialog(OutputInfo outputInfo) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Application info");
-        alert.setHeaderText("Antipick");
+        alert.setHeaderText("Counterpick");
 
         StringBuilder stringBuilder = new StringBuilder();
 
@@ -153,7 +153,7 @@ public class Main extends Application {
         outputInfoContent.setMaxWidth(Double.MAX_VALUE);
 
         Label label = new Label();
-        label.setText("Antipick with maximum win rate summ:");
+        label.setText("Counterpick with maximum win rate summ:");
 
         outputInfoContent.add(label, 0, 0);
         outputInfoContent.add(textArea, 0, 0);

@@ -1,6 +1,6 @@
 package observer;
 
-import com.vsprog.anitipick.*;
+import com.vsprog.counterpick.*;
 
 import java.util.*;
 
@@ -8,11 +8,11 @@ import java.util.*;
  * @author vsa
  * @date 08.08.2015.
  */
-public class CurrentAntiPickDisplay implements Observer {
+public class CurrentCounterpickDisplay implements Observer {
     private List<Hero> heroes;
 
     private Pick pick;
-    private Pick antiPick;
+    private Pick counterPick;
     private List<String> firstHeroEnemies;
     private List<String> secondHeroEnemies;
     private List<String> thirdHeroEnemies;
@@ -25,12 +25,12 @@ public class CurrentAntiPickDisplay implements Observer {
     private int currentCount = 0;
 
     private Hero firstEnemy, secondEnemy, thirdEnemy, fourthEnemy, fifthEnemy;
-    private Map<String, Integer> antiPickHeroes;
+    private Map<String, Integer> counterPickHeroes;
 
     private OutputInfo outputInfo;
     private boolean isAnalyzed = false;
 
-    public CurrentAntiPickDisplay(Pick pick) {
+    public CurrentCounterpickDisplay(Pick pick) {
         this.pick = pick;
         firstEnemy = new Hero();
         secondEnemy = new Hero();
@@ -38,7 +38,7 @@ public class CurrentAntiPickDisplay implements Observer {
         fourthEnemy = new Hero();
         fifthEnemy = new Hero();
 
-        antiPick = new Pick();
+        counterPick = new Pick();
 
         firstHeroEnemies = new ArrayList<String>();
         secondHeroEnemies = new ArrayList<String>();
@@ -48,7 +48,7 @@ public class CurrentAntiPickDisplay implements Observer {
 
         heroFriends = new ArrayList<String>();
 
-        antiPickHeroes = new HashMap<String, Integer>();
+        counterPickHeroes = new HashMap<String, Integer>();
         heroesBunch = new ArrayList<Bunch>();
 
         outputInfo = new OutputInfo();
@@ -56,7 +56,6 @@ public class CurrentAntiPickDisplay implements Observer {
         pick.registerObserver(this);
     }
 
-    @Override
     public void update(Hero firstHero, Hero secondHero, Hero thirdHero, Hero fourthHero, Hero fifthHero) {
         int weight;
 
@@ -65,7 +64,7 @@ public class CurrentAntiPickDisplay implements Observer {
             weight = 1;
 
             for (String heroName : firstHeroEnemies) {
-                antiPickHeroes.put(heroName, weight);
+                counterPickHeroes.put(heroName, weight);
             }
         }
 
@@ -75,11 +74,11 @@ public class CurrentAntiPickDisplay implements Observer {
             weight = 1;
 
             for (String heroName : secondHeroEnemies) {
-                if (antiPickHeroes.containsKey(heroName)) {
-                    weight = antiPickHeroes.get(heroName);
-                    antiPickHeroes.put(heroName, weight++);
+                if (counterPickHeroes.containsKey(heroName)) {
+                    weight = counterPickHeroes.get(heroName);
+                    counterPickHeroes.put(heroName, weight++);
                 } else {
-                    antiPickHeroes.put(heroName, weight);
+                    counterPickHeroes.put(heroName, weight);
                 }
             }
         }
@@ -90,11 +89,11 @@ public class CurrentAntiPickDisplay implements Observer {
             weight = 1;
 
             for (String heroName : thirdHeroEnemies) {
-                if (antiPickHeroes.containsKey(heroName)) {
-                    weight = antiPickHeroes.get(heroName);
-                    antiPickHeroes.put(heroName, weight++);
+                if (counterPickHeroes.containsKey(heroName)) {
+                    weight = counterPickHeroes.get(heroName);
+                    counterPickHeroes.put(heroName, weight++);
                 } else {
-                    antiPickHeroes.put(heroName, weight);
+                    counterPickHeroes.put(heroName, weight);
                 }
             }
         }
@@ -105,11 +104,11 @@ public class CurrentAntiPickDisplay implements Observer {
             weight = 1;
 
             for (String heroName : fourthHeroEnemies) {
-                if (antiPickHeroes.containsKey(heroName)) {
-                    weight = antiPickHeroes.get(heroName);
-                    antiPickHeroes.put(heroName, weight++);
+                if (counterPickHeroes.containsKey(heroName)) {
+                    weight = counterPickHeroes.get(heroName);
+                    counterPickHeroes.put(heroName, weight++);
                 } else {
-                    antiPickHeroes.put(heroName, weight);
+                    counterPickHeroes.put(heroName, weight);
                 }
             }
         }
@@ -120,11 +119,11 @@ public class CurrentAntiPickDisplay implements Observer {
             weight = 1;
 
             for (String heroName : fifthHeroEnemies) {
-                if (antiPickHeroes.containsKey(heroName)) {
-                    weight = antiPickHeroes.get(heroName);
-                    antiPickHeroes.put(heroName, weight++);
+                if (counterPickHeroes.containsKey(heroName)) {
+                    weight = counterPickHeroes.get(heroName);
+                    counterPickHeroes.put(heroName, weight++);
                 } else {
-                    antiPickHeroes.put(heroName, weight);
+                    counterPickHeroes.put(heroName, weight);
                 }
             }
         }
@@ -135,7 +134,7 @@ public class CurrentAntiPickDisplay implements Observer {
 
         if (firstHero != null && secondHero != null && thirdHero != null && fourthHero != null && fifthHero != null) {
 
-            for (String heroName : antiPickHeroes.keySet()) {
+            for (String heroName : counterPickHeroes.keySet()) {
 
                 // get hero from anti pick list
                 Hero hero = HeroesBuilder.getHeroByName(heroes, heroName);
@@ -143,7 +142,7 @@ public class CurrentAntiPickDisplay implements Observer {
                 List<String> friends = hero.getFriends();
 
                 for (String friendHeroName : friends) {
-                    if (antiPickHeroes.containsKey(friendHeroName)) {
+                    if (counterPickHeroes.containsKey(friendHeroName)) {
                         Bunch bunch = new Bunch();
                         bunch.setSecondHero(friendHeroName);
                         bunch.setFirstHero(heroName);
@@ -273,7 +272,6 @@ public class CurrentAntiPickDisplay implements Observer {
 
         if (firstHero != null && secondHero != null && thirdHero != null && fourthHero != null && fifthHero != null) {
             Map<Double, Bunch> treeMap = new TreeMap<Double, Bunch>(new Comparator<Double>() {
-                @Override
                 public int compare(Double o1, Double o2) {
                     return o2.compareTo(o1);
                 }

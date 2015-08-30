@@ -1,4 +1,4 @@
-package com.vsprog.anitipick;
+package com.vsprog.counterpick;
 
 import javafx.scene.image.Image;
 import org.apache.xerces.dom.DeferredElementImpl;

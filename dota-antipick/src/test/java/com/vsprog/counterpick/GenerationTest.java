@@ -1,4 +1,4 @@
-package com.vsprog.anitipick;
+package com.vsprog.counterpick;
 
 
 

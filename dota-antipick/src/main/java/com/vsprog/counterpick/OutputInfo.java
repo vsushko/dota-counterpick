@@ -1,4 +1,4 @@
-package com.vsprog.anitipick;
+package com.vsprog.counterpick;
 
 import java.util.ArrayList;
 import java.util.List;

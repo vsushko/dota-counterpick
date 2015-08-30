@@ -1,6 +1,6 @@
 package observer;
 
-import com.vsprog.anitipick.Hero;
+import com.vsprog.counterpick.Hero;
 
 /**
  * @author vsa
