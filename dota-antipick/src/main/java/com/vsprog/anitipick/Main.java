@@ -1,18 +1,21 @@
 package com.vsprog.anitipick;
 
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
-import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import observer.CurrentAntiPickDisplay;
 
@@ -21,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * DOTA ANTI PICK Application
+ * DOTA COUNTERPICK Application
  */
 public class Main extends Application {
     public static final int ROW_COUNT = 7;
@@ -32,19 +35,40 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage stage) throws Exception {
-        Group root = new Group();
-        Scene scene = new Scene(root, 930, 930);
-        stage.setScene(scene);
-        stage.setTitle("Dota antipick");
+    public void start(final Stage stage) throws Exception {
+        stage.setTitle("Dota counterpick");
         stage.setResizable(false);
+
+        VBox vbox = new VBox();
+        Scene scene = new Scene(vbox, 930, 930);
+
+        MenuBar menuBar = new MenuBar();
+        menuBar.prefWidthProperty().bind(stage.widthProperty());
+
+        Menu menu = new Menu("Actions");
+
+        MenuItem clearItem = new MenuItem("Clear", null);
+        clearItem.setMnemonicParsing(true);
+        clearItem.setAccelerator(new KeyCodeCombination(KeyCode.C, KeyCombination.CONTROL_DOWN));
+        clearItem.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent event) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText("TEST");
+                alert.showAndWait();
+            }
+        });
+        menu.getItems().add(clearItem);
+
+        menuBar.getMenus().add(menu);
+        vbox.getChildren().add(menuBar);
+        stage.setScene(scene);
 
         GridPane grid = new GridPane();
         grid.setPadding(new Insets(10, 10, 10, 10));
         grid.setVgap(GAPS_LENGTH);
         grid.setHgap(GAPS_LENGTH);
 
-        scene.setRoot(grid);
+        vbox.getChildren().add(grid);
 
         HeroesBuilder heroesBuilder = new HeroesBuilder();
         List<Hero> heroes = heroesBuilder.loadHeroesInfo();
@@ -91,7 +115,6 @@ public class Main extends Application {
                 imageRow++;
             }
         }
-
         stage.show();
     }
 
