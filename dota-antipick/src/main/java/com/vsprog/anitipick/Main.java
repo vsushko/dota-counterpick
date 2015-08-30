@@ -1,7 +1,6 @@
 package com.vsprog.anitipick;
 
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -29,6 +28,8 @@ import java.util.List;
 public class Main extends Application {
     public static final int ROW_COUNT = 7;
     public static final int GAPS_LENGTH = 2;
+    private CurrentAntiPickDisplay antiPickDisplay;
+    private Pick pick;
 
     public static void main(String[] args) throws IOException {
         launch(args);
@@ -52,9 +53,11 @@ public class Main extends Application {
         clearItem.setAccelerator(new KeyCodeCombination(KeyCode.C, KeyCombination.CONTROL_DOWN));
         clearItem.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent event) {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setContentText("TEST");
-                alert.showAndWait();
+                antiPickDisplay.setCurrentCount(0);
+                pick.clearPick();
+                antiPickDisplay.setIsAnalyzed(false);
+                antiPickDisplay.getFinalOutputInfo().clearOutputInfo();
+
             }
         });
         menu.getItems().add(clearItem);
@@ -70,8 +73,8 @@ public class Main extends Application {
 
         vbox.getChildren().add(grid);
 
-        HeroesBuilder heroesBuilder = new HeroesBuilder();
-        List<Hero> heroes = heroesBuilder.loadHeroesInfo();
+        final HeroesBuilder heroesBuilder = new HeroesBuilder();
+        final List<Hero> heroes = heroesBuilder.loadHeroesInfo();
 
         List<String> heroNames = new ArrayList<String>();
 
@@ -82,8 +85,8 @@ public class Main extends Application {
         List<Image> images = heroesBuilder.loadImageHeroes(heroNames);
         System.out.println(images.size());
 
-        Pick pick = new Pick();
-        CurrentAntiPickDisplay antiPickDisplay = new CurrentAntiPickDisplay(pick);
+        pick = new Pick();
+        antiPickDisplay = new CurrentAntiPickDisplay(pick);
         antiPickDisplay.setHeroes(heroes);
         OutputInfo outputInfo = new OutputInfo();
 
@@ -96,11 +99,11 @@ public class Main extends Application {
 
             final int count = i;
             imageView.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-                @Override
                 public void handle(MouseEvent event) {
                     antiPickDisplay.incrementCurrentCount();
                     Hero hero = heroesBuilder.getHeroByName(heroes, heroes.get(count).getName());
                     pick.addEnemyHeroes(hero, antiPickDisplay.getCurrentCount());
+
                     if (antiPickDisplay.isAnalyzed()) {
                         showMessageDialog(antiPickDisplay.getFinalOutputInfo());
                     }

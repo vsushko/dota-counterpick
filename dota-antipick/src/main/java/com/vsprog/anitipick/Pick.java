@@ -17,7 +17,7 @@ public class Pick implements Observable {
     private Hero firstEnemy, secondEnemy, thirdEnemy, fourthEnemy, fifthEnemy;
 
     public Pick() {
-        observers = new ArrayList<>();
+        observers = new ArrayList<Observer>();
         enemies = new ArrayList<Hero>();
     }
 
@@ -102,4 +102,11 @@ public class Pick implements Observable {
         notifyObservers();
     }
 
+    public void clearPick() {
+        firstEnemy = null;
+        secondHero = null;
+        thirdEnemy = null;
+        fourthEnemy = null;
+        fifthEnemy = null;
+    }
 }

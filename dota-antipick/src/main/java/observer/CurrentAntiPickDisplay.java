@@ -40,16 +40,16 @@ public class CurrentAntiPickDisplay implements Observer {
 
         antiPick = new Pick();
 
-        firstHeroEnemies = new ArrayList<>();
-        secondHeroEnemies = new ArrayList<>();
-        thirdHeroEnemies = new ArrayList<>();
-        fourthHeroEnemies = new ArrayList<>();
-        fifthHeroEnemies = new ArrayList<>();
+        firstHeroEnemies = new ArrayList<String>();
+        secondHeroEnemies = new ArrayList<String>();
+        thirdHeroEnemies = new ArrayList<String>();
+        fourthHeroEnemies = new ArrayList<String>();
+        fifthHeroEnemies = new ArrayList<String>();
 
-        heroFriends = new ArrayList<>();
+        heroFriends = new ArrayList<String>();
 
-        antiPickHeroes = new HashMap<>();
-        heroesBunch = new ArrayList<>();
+        antiPickHeroes = new HashMap<String, Integer>();
+        heroesBunch = new ArrayList<Bunch>();
 
         outputInfo = new OutputInfo();
 
@@ -129,9 +129,9 @@ public class CurrentAntiPickDisplay implements Observer {
             }
         }
 
-        List<Bunch> triples = new ArrayList<>();
-        List<Bunch> quaternion = new ArrayList<>();
-        List<Bunch> cinque = new ArrayList<>();
+        List<Bunch> triples = new ArrayList<Bunch>();
+        List<Bunch> quaternion = new ArrayList<Bunch>();
+        List<Bunch> cinque = new ArrayList<Bunch>();
 
         if (firstHero != null && secondHero != null && thirdHero != null && fourthHero != null && fifthHero != null) {
 
@@ -360,6 +360,10 @@ public class CurrentAntiPickDisplay implements Observer {
         currentCount++;
     }
 
+    public void setCurrentCount(int currentCount) {
+        this.currentCount = currentCount;
+    }
+
     public void setHeroes(List<Hero> heroes) {
         this.heroes = heroes;
     }
@@ -370,5 +374,9 @@ public class CurrentAntiPickDisplay implements Observer {
 
     public boolean isAnalyzed() {
         return isAnalyzed;
+    }
+
+    public void setIsAnalyzed(boolean isAnalyzed) {
+        this.isAnalyzed = isAnalyzed;
     }
 }
