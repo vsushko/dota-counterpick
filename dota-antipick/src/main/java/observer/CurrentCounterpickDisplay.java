@@ -9,6 +9,7 @@ import java.util.*;
  * @date 08.08.2015.
  */
 public class CurrentCounterpickDisplay implements Observer {
+    public static final int BUNCHES_COUNT = 7;
     private List<Hero> heroes;
 
     private Pick pick;
@@ -306,7 +307,7 @@ public class CurrentCounterpickDisplay implements Observer {
             outputInfo.setPickBunch(pickBunch);
 
             for (Bunch finalBunch : treeMap.values()) {
-                if (threeCount < 3) {
+                if (threeCount < BUNCHES_COUNT) {
                     System.out.println(finalBunch + " | win rate summ: " + finalBunch.getWinRateSum());
                     outputInfo.addBunch(finalBunch);
                 } else {
