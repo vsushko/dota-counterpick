@@ -7,3 +7,6 @@ To clear your choice you need to click menu button "Actions" -> Clear.
 
 Output sample:
 ![Alt text](https://github.com/vsushko/dota-counterpick/blob/master/images/pic2.png "Output dialog")
+
+Link to download stable version:
+https://drive.google.com/open?id=0B5yYPEGMhdvgbWpuX1FvR0RTRXM
