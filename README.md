@@ -9,4 +9,4 @@ Output sample:
 ![Alt text](https://github.com/vsushko/dota-counterpick/blob/master/images/pic2.png "Output dialog")
 
 Link to download stable version:
-https://drive.google.com/open?id=0B5yYPEGMhdvgZmExNWN5MFh4NkU
+https://drive.google.com/folderview?id=0B5yYPEGMhdvgfkt5SXRuYnVLU3ZPcW0yVHZ1VlFUcGlvOTdBSkdTUUZjYVZhVDgwRmZyamc&usp=sharing
