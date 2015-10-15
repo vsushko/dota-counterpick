@@ -220,7 +220,6 @@ public class CurrentCounterpickDisplay implements Observer {
 
         Map<Double, Bunch> finalResultList = new HashMap<Double, Bunch>();
 
-        int count = 0;
         for (Bunch bunch : cinque) {
             if (!bunch.getFirstHero().equals(firstHero.getName())
                     && !bunch.getSecondHero().equals(firstHero.getName())
@@ -267,7 +266,6 @@ public class CurrentCounterpickDisplay implements Observer {
                 bunch.setWinRateSum(winRateSum);
                 finalResultList.put(winRateSum, bunch);
 
-                count++;
             }
         }
 
@@ -280,7 +278,10 @@ public class CurrentCounterpickDisplay implements Observer {
 
             treeMap.putAll(finalResultList);
 
-            int threeCount = 0;
+            Map<Double, Bunch> rawMap = new HashMap<Double, Bunch>();
+            rawMap.putAll(finalResultList);
+
+            int sevenCount = 0;
 
             double totalWinRate = firstHero.getWinrate()
                     + secondHero.getWinrate()
@@ -298,23 +299,48 @@ public class CurrentCounterpickDisplay implements Observer {
             );
 
             pickBunch.setWinRateSum(firstHero.getWinrate()
-                    + secondHero.getWinrate()
-                    + thirdHero.getWinrate()
-                    + fourthHero.getWinrate()
-                    + fifthHero.getWinrate()
+                            + secondHero.getWinrate()
+                            + thirdHero.getWinrate()
+                            + fourthHero.getWinrate()
+                            + fifthHero.getWinrate()
             );
 
             outputInfo.setPickBunch(pickBunch);
 
             for (Bunch finalBunch : treeMap.values()) {
-                if (threeCount < BUNCHES_COUNT) {
+                if (sevenCount < BUNCHES_COUNT) {
                     System.out.println(finalBunch + " | win rate summ: " + finalBunch.getWinRateSum());
                     outputInfo.addBunch(finalBunch);
+                } else {
+                    isAnalyzed = false;
+                    break;
+                }
+                sevenCount++;
+            }
+
+            sevenCount = 0;
+
+            for (Bunch finalBunch : rawMap.values()) {
+                if (sevenCount < BUNCHES_COUNT) {
+                    System.out.println(finalBunch + " | win rate summ: " + finalBunch.getWinRateSum());
+                    outputInfo.addRawBunch(finalBunch);
                 } else {
                     isAnalyzed = true;
                     break;
                 }
-                threeCount++;
+                sevenCount++;
+            }
+
+            if (firstHero.getName().equals(secondHero.getName())
+                    && secondHero.getName().equals(thirdHero.getName())
+                    && thirdHero.getName().equals(fourthHero.getName())
+                    && fourthHero.getName().equals(fifthHero.getName())) {
+                for (String enemy : firstHero.getEnemies()) {
+                    Bunch oneHero = new Bunch(enemy);
+                    Hero hero = HeroesBuilder.getHeroByName(heroes, enemy);
+                    oneHero.setWinRateSum(hero.getWinrate());
+                    outputInfo.addOneHeroBunch(oneHero);
+                }
             }
             System.out.println("\n");
         }

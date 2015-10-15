@@ -62,6 +62,34 @@ public class Main extends Application {
         });
         menu.getItems().add(clearItem);
 
+        MenuItem rateItem = new MenuItem("Rate", null);
+        rateItem.setMnemonicParsing(true);
+        rateItem.setAccelerator(new KeyCodeCombination(KeyCode.W, KeyCombination.CONTROL_DOWN));
+        rateItem.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent event) {
+                currentCounterpickDisplay.setCurrentCount(0);
+                pick.clearPick();
+                currentCounterpickDisplay.setIsAnalyzed(false);
+                currentCounterpickDisplay.getFinalOutputInfo().clearOutputInfo();
+
+            }
+        });
+        menu.getItems().add(rateItem);
+
+        MenuItem counterItem = new MenuItem("Counter", null);
+        counterItem.setMnemonicParsing(true);
+        counterItem.setAccelerator(new KeyCodeCombination(KeyCode.R, KeyCombination.CONTROL_DOWN));
+        counterItem.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent event) {
+                currentCounterpickDisplay.setCurrentCount(0);
+                pick.clearPick();
+                currentCounterpickDisplay.setIsAnalyzed(false);
+                currentCounterpickDisplay.getFinalOutputInfo().clearOutputInfo();
+
+            }
+        });
+        menu.getItems().add(counterItem);
+
         menuBar.getMenus().add(menu);
         vbox.getChildren().add(menuBar);
         stage.setScene(scene);
@@ -132,12 +160,24 @@ public class Main extends Application {
         StringBuilder stringBuilder = new StringBuilder();
 
         stringBuilder.append(outputInfo.getPickBunch()
-                + "win rate: "
-                + String.valueOf(outputInfo.getPickBunch().getWinRateSum())
-                + "\n\n"
+                        + "win rate: "
+                        + String.valueOf(outputInfo.getPickBunch().getWinRateSum())
+                        + "\n\n"
         );
 
         for (Bunch bunch : outputInfo.getBunches()) {
+            stringBuilder.append(bunch + " | win rate sum : " + bunch.getWinRateSum() + "\n");
+        }
+
+        stringBuilder.append("***************** RAW BUNCHES *******************************\n");
+
+        for (Bunch bunch : outputInfo.getRawBunches()) {
+            stringBuilder.append(bunch + " | win rate sum : " + bunch.getWinRateSum() + "\n");
+        }
+
+        stringBuilder.append("***************** ALL ENEMIES *******************************\n");
+
+        for (Bunch bunch : outputInfo.getOneHeroBunches()) {
             stringBuilder.append(bunch + " | win rate sum : " + bunch.getWinRateSum() + "\n");
         }
 

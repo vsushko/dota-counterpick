@@ -9,10 +9,22 @@ import java.util.List;
  */
 public class OutputInfo {
     private List<Bunch> bunches;
+    private List<Bunch> rawBunches;
+    private List<Bunch> oneHeroBunches;
     private Bunch pickBunch;
 
     public OutputInfo() {
         bunches = new ArrayList<Bunch>();
+        rawBunches = new ArrayList<Bunch>();
+        oneHeroBunches = new ArrayList<Bunch>();
+    }
+
+    public List<Bunch> getRawBunches() {
+        return rawBunches;
+    }
+
+    public List<Bunch> getOneHeroBunches() {
+        return oneHeroBunches;
     }
 
     public List<Bunch> getBunches() {
@@ -23,8 +35,17 @@ public class OutputInfo {
         bunches.add(bunch);
     }
 
+    public void addRawBunch(Bunch bunch) {
+        rawBunches.add(bunch);
+    }
+
+    public void addOneHeroBunch(Bunch bunch) {
+        rawBunches.add(bunch);
+    }
+
     public void clearOutputInfo() {
         bunches.clear();
+        rawBunches.clear();
     }
 
     public Bunch getPickBunch() {
