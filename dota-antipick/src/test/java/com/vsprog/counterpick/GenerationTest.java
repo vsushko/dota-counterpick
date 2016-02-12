@@ -296,7 +296,7 @@ public class GenerationTest {
         HeroesBuilder heroesBuilder = new HeroesBuilder();
 
         List<Hero> heroes = heroesBuilder.loadHeroesInfo();
-        assertEquals(heroes.size(), 110);
+        assertEquals(heroes.size(), 111);
 
         List<String> enemies = heroes.get(0).getEnemies();
         assertEquals(enemies.size(), 19);
