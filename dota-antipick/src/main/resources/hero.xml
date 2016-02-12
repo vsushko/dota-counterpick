@@ -3916,6 +3916,10 @@
             <enemy id="4" type="bad">Axe</enemy>
             <enemy id="40" type="bad">Kunkka</enemy>
             <enemy id="27" type="bad">Earthshaker</enemy>
+            <enemy id="72" type="bad">Riki</enemy>
+            <enemy id="26" type="bad">Earth Spirit</enemy>
+            <enemy id="41" type="bad">Legion Commander</enemy>
+            <enemy id="66" type="bad">Phoenix</enemy>
         </enemies>
         <friends>
             <friend id="93">Tiny</friend>
