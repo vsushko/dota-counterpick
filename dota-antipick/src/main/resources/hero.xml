@@ -3900,4 +3900,44 @@
             <friend id="75">Shadow Demon</friend>
         </friends>
     </hero>
+    <hero id="110">
+        <name>Arc Warden</name>
+        <winrate>42.27</winrate>
+        <enemies>
+            <enemy id="70" type="bad">Queen of Pain</enemy>
+            <enemy id="58" type="bad">Night Stalker</enemy>
+            <enemy id="9" type="bad">Bounty Hunter</enemy>
+            <enemy id="59" type="bad">Nyx Assassin</enemy>
+            <enemy id="85" type="bad">Storm Spirit</enemy>
+            <enemy id="81" type="bad">Slark</enemy>
+            <enemy id="8" type="bad">Bloodseeker</enemy>
+            <enemy id="68" type="bad">Pudge</enemy>
+            <enemy id="86" type="bad">Sven</enemy>
+            <enemy id="4" type="bad">Axe</enemy>
+            <enemy id="40" type="bad">Kunkka</enemy>
+            <enemy id="27" type="bad">Earthshaker</enemy>
+        </enemies>
+        <friends>
+            <friend id="93">Tiny</friend>
+            <friend id="95">Tusk</friend>
+            <friend id="26">Earth Spirit</friend>
+            <friend id="68">Pudge</friend>
+            <friend id="50">Magnus</friend>
+            <friend id="99">Vengeful Spirit</friend>
+            <friend id="47">Lone Druid</friend>
+            <friend id="73">Rubick</friend>
+            <friend id="6">Batrider</friend>
+            <friend id="18">Crystal Maiden</friend>
+            <friend id="27">Earthshaker</friend>
+            <friend id="77">Shadow Shaman</friend>
+            <friend id="37">Jakiro</friend>
+            <friend id="15">Chen</friend>
+            <friend id="39">Keeper of the Light</friend>
+            <friend id="43">Lich</friend>
+            <friend id="5">Bane</friend>
+            <friend id="46">Lion</friend>
+            <friend id="103">Warlock</friend>
+            <friend id="20">Dazzle</friend>
+        </friends>
+    </hero>
 </heroes>
