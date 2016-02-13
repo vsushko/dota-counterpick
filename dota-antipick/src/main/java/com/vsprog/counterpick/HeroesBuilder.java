@@ -1,7 +1,7 @@
 package com.vsprog.counterpick;
 
+import com.sun.org.apache.xerces.internal.dom.DeferredElementImpl;
 import javafx.scene.image.Image;
-import org.apache.xerces.dom.DeferredElementImpl;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;

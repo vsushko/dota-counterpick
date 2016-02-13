@@ -8,8 +8,16 @@
     <name>dota-counterpick</name>
 
     <organization>
-        <name>Company</name>
+        <name>VSPROG Home company</name>
     </organization>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <mainClass>com.vsprog.counterpick.Main</mainClass>
+        <application.title>${project.artifactId}</application.title>
+        <copyright>Vasiliy Sushko</copyright>
+    </properties>
+
 
     <dependencies>
         <dependency>
@@ -30,10 +38,96 @@
             <version>2.45.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>xerces</groupId>
+            <artifactId>xerces</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <id>unpack-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>unpack-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <excludeScope>system</excludeScope>
+                            <excludeGroupIds>junit,org.mockito,org.hamcrest</excludeGroupIds>
+                            <outputDirectory>${project.build.directory}/classes</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <id>default-cli</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>${java.home}/bin/java</executable>
+                            <commandlineArgs>-jar '${project.build.directory}/dist/${project.build.finalName}-${project.version}.jar'
+                            </commandlineArgs>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <property name="compile_classpath" refid="maven.compile.classpath"/>
+                                <property name="outputDir" value="${project.build.outputDirectory}"/>
+                                <property name="sourceDir" value="${project.build.sourceDirectory}"/>
+                                <property name="distDir" value="${project.build.outputDirectory}/../dist"/>
+                                <property name="javaHome" value="${java.home}"/>
+                                <property name="versionNo" value="${project.version}"/>
+                                <property name="mainClass" value="${mainClass}" />
+                                <property name="appName" value="${application.title}"/>
+                                <property name="appTitle" value="${application.title}"/>
+                                <property name="appVendor" value="${project.organization.name}"/>
+                                <property name="appCopyright" value="${copyright}"/>
+                                <property name="appMenuGroup" value="${project.organization.name}"/>
+                                <ant antfile="${basedir}/build.xml" target="default"/>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -65,12 +159,16 @@
             <plugin>
                 <groupId>com.zenjava</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>8.1.2</version>
+                <version>8.1.4</version>
                 <configuration>
                     <mainClass>com.vsprog.counterpick.Main</mainClass>
-                    <vendor>vsprog-home</vendor>
+                    <vendor>vsprog</vendor>
                     <allPermissions>true</allPermissions>
+                    <additionalAppResources>
+                        <iconHref></iconHref>
+                    </additionalAppResources>
                 </configuration>
+
             </plugin>
 
         </plugins>

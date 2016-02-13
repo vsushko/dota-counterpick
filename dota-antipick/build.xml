@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project name="App" default="default" basedir="."
+         xmlns:fx="javafx:com.sun.javafx.tools.ant">
+
+
+    <target name="default" depends="clean,compile">
+
+        <!-- defines the classpath -->
+        <path id="cp">
+            <filelist>
+                <file name="${javaHome}/../lib/ant-javafx.jar"/>
+                <file name="${basedir}" />
+            </filelist>
+        </path>
+
+        <!-- defines the task with a reference to classpath -->
+        <taskdef resource="com/sun/javafx/tools/ant/antlib.xml"
+                 uri="javafx:com.sun.javafx.tools.ant"
+                 classpathref="cp"/>
+
+
+        <fx:application id="appId"
+                        name="${appName}"
+                        mainClass="${mainClass}"
+                        version="${versionNo}"/>
+
+
+        <!-- Defines the resources needed by the application -->
+        <fx:resources id="appRes">
+            <fx:fileset dir="${distDir}" includes="${appName}-${versionNo}.jar"/>
+        </fx:resources>
+
+        <!-- Create a jar file -->
+        <fx:jar destfile="${distDir}/${appName}-${versionNo}.jar">
+            <fx:application refid="appId"/>
+            <fx:resources refid="appRes"/>
+            <fileset dir="${outputDir}"/>
+        </fx:jar>
+
+        <fx:deploy width="300" height="250"
+                   outdir="${distDir}" embedJNLP="true"
+                   outfile="${appName}-${versionNo}"
+                   nativebundles="exe" verbose="true">
+
+            <!-- define for ex. min javafx version -->
+            <!-- <fx:platform /> -->
+
+            <!-- defines the application and setup preferences -->
+            <fx:preferences shortcut="true" install="true" menu="true"/>
+
+            <!-- defines the application parts -->
+            <fx:application refId="appId"/>
+
+            <!-- defines the needed resources -->
+            <fx:resources refid="appRes"/>
+
+            <!-- defines the application info details -->
+            <fx:info title="${appTitle}"
+                     vendor="${appVendor}"
+                     copyright="${appCopyright}"/>
+
+            <!-- Some bundle arguments only for special platforms -->
+            <fx:bundleArgument arg="win.menuGroup" value="${appMenuGroup}"/>
+        </fx:deploy>
+
+    </target>
+
+    <!-- Removes the folders of previous runs -->
+    <target name="clean">
+        <mkdir dir="${outputDir}"/>
+        <mkdir dir="${distDir}"/>
+
+        <delete>
+            <fileset dir="${outputDir}" includes="**/*"/>
+            <fileset dir="${distDir}" includes="**/*"/>
+        </delete>
+    </target>
+
+    <!-- Compiles the sources -->
+    <target name="compile" depends="clean">
+        <javac includeantruntime="false"
+               srcdir="${sourceDir}"
+               destdir="${outputDir}"
+               fork="yes"
+               executable="${javaHome}/../bin/javac"
+               source="1.8"
+               debug="on">
+        </javac>
+    </target>
+
+</project>
