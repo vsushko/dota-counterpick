@@ -1,12 +1,13 @@
-Dota counterpick application:</br>
-We have a standard public game: ten players and ten heroes accordingly.</br>
-When opponent choose hero you pick this hero in mesh in window accordingly and then you can click the same hero in mesh (4 times) or pick another hero which is picked by opponents. If you need to clear you chose, click "ctrl+c". This program analyses when five opponents is picked, if you picked five heroes the result window comes up authomatically.</br></br>
+# Dota 2 counterpick application
+This application helps Dota 2 players to choose heroes more intelligently during a pre-game drafting phase. The player selects his hero and then can help teammates to choose theirs or discuss potential strategies for selecting heroes with teammates.
+
+When the opponent chooses a hero player selects the hero in the mesh window accordingly and then you can click the same hero in mesh (4 times) or select another hero which was picked by opponents. 
+
+For clearing the application state, click "ctrl+c". This program starts analyses when five opponents are selected, if you selected five heroes the result window comes up authomatically.
+
 ![Alt text](https://github.com/vsushko/dota-counterpick/blob/master/images/pic1.png "Heroes List")
 
-To clear your choice you need to click menu button "Actions" -> Clear.
+To clear your choice you need to click the menu button "Actions" -> Clear.
 
 Output sample:
 ![Alt text](https://github.com/vsushko/dota-counterpick/blob/master/images/pic2.png "Output dialog")
-
-Link to download stable version:
-https://drive.google.com/open?id=0B5yYPEGMhdvgWERDVjNJNlFjQVU
