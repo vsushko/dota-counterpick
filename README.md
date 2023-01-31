@@ -1,5 +1,5 @@
 # Dota 2 counterpick application
-This application helps Dota 2 players to choose heroes more intelligently during a pre-game drafting phase. The player selects his hero and then can help teammates to choose theirs or discuss potential strategies for selecting heroes with teammates.
+This application helps [Dota 2](https://en.wikipedia.org/wiki/Dota_2) players to choose heroes more intelligently during a pre-game drafting phase. The player selects his hero and then can help teammates to choose theirs or discuss potential strategies for selecting heroes with teammates.
 
 When the opponent chooses a hero player selects the hero in the mesh window accordingly and then you can click the same hero in mesh (4 times) or select another hero which was picked by opponents. 
 
