@@ -3,7 +3,7 @@ This application helps [Dota 2](https://en.wikipedia.org/wiki/Dota_2) players to
 
 When the opponent chooses a hero player selects the hero in the mesh window accordingly and then you can click the same hero in mesh (4 times) or select another hero which was picked by opponents. 
 
-For clearing the application state, click "ctrl+c". This program starts analyses when five opponents are selected, if you selected five heroes the result window comes up authomatically.
+For clearing the application state, click "ctrl+c". This program starts analyses when five opponents are selected, if you selected five heroes the result window comes up automatically.
 
 ![Alt text](https://github.com/vsushko/dota-counterpick/blob/master/images/pic1.png "Heroes List")
 
